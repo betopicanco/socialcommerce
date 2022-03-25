@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Batman from "../public/img/capas/batman.jpg"
+import Icons from "./Icons"
 
 interface PostProps {
     genre: string,
@@ -62,6 +63,8 @@ const Post = (props: any) => {
                 <p className={styles.content}>
 
                 </p>
+
+                <Icons/>
             </div>
             
         </div>

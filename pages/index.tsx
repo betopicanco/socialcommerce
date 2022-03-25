@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 
 const Home: NextPage = () => {
   return (
-    <div className={`bg-neutral-700`}>
+    <div className={`bg-neutral-800`}>
         <Layout>
             <Feed />
         </Layout>

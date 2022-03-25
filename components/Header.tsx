@@ -21,7 +21,8 @@ const Header = () => {
             height: '40px'
         },
         menuIcon: `
-            p-1 rounded-md bg-violet-400 cursor-pointer
+            p-1 rounded-md bg-violet-400 
+            cursor-pointer drop-shadow-md
         `,
         svg: `
             stroke-yellow-300 
