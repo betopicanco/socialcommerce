@@ -53,4 +53,4 @@ const Icons = (props: any) => {
     )
 }
 
-export default Icons
+export default Icons 
