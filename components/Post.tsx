@@ -1,5 +1,7 @@
 import Image from "next/image"
-import Batman from "../public/img/capas/batman.jpg"
+import { useState } from "react"
+
+import CommentArea from "./CommentArea/CommentArea"
 import Icons from "./Icons"
 
 interface PostProps {
@@ -12,6 +14,10 @@ interface PostProps {
 
 const Post = (props: any) => {
     
+    const [liked, setLiked] = useState<boolean>(props.liked ?? false)
+    const [comment, setComment] = useState<boolean>(false)
+    const image = props.img
+
     const styles = {
         post: `
             py-4
@@ -36,7 +42,7 @@ const Post = (props: any) => {
         `  
     }
 
-    const image = props.img
+
 
     return (
         <div className={styles.post}>
@@ -57,6 +63,8 @@ const Post = (props: any) => {
             </div>
 
             <div className={`px-4`}>
+                <Icons liked={liked} comment={comment} setLiked={setLiked} setComment={setComment}/>
+
                 <p className={styles.title}>
                     {props.title}
                 </p>
@@ -64,7 +72,13 @@ const Post = (props: any) => {
 
                 </p>
 
-                <Icons/>
+                
+            </div>
+
+            <div>
+                {comment ? (
+                    <CommentArea/>
+                ) : ''}
             </div>
             
         </div>
