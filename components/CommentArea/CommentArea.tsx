@@ -13,17 +13,19 @@ const CommentArea = (props: any) => {
     }
     let currentComments = [
         {author: 'Fulano', content: 'Muito Bom'},
-        {author: 'Siclano', content: 'Incrível'},
-        {author: 'Beltrano', content: 'Sensacional'}
+        {author: 'Siclano', content: 'Gostei'},
+        {author: 'Beltrano', content: 'Incrível'}
     ]
 
     const [commentContent, setCommentContent] = useState('')
     const [comments, setComments] = useState(currentComments)
 
     function addComment() {
-        comments.push({author: 'Você', content: commentContent})
-        setComments(comments)
-        setCommentContent('')
+        if(commentContent !== '') {
+            comments.push({author: 'Você', content: commentContent})
+            setComments(comments)
+            setCommentContent('')
+        }
     }
 
     return (

@@ -5,10 +5,10 @@ import Feed from '../components/Feed'
 import Layout from '../components/Layout'
 
 const Home: NextPage = () => {
-    const menuItems = {
-        href: '/test',
-        title: 'teste'
-    }
+    const menuItems = [
+        { href: '/test',  title: 'teste' },
+        {href: '/test', title: 'outro'}
+    ]
 
     return (
         <div className={`bg-neutral-800`}>

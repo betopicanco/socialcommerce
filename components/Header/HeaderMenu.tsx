@@ -1,0 +1,30 @@
+import MenuItem from "./MenuItem"
+
+interface HeaderMenuProps {
+    items: {href:string, title:string}
+}
+
+const HeaderMenu = (props:any) => {
+
+    const styles = {
+        nav: `
+            flex fixed right-0 z-40 w-20 
+            bg-neutral-700/60 rounded-b-lg
+            border-b border-l border-r border-neutral-700
+        `
+    }
+
+    return (
+        <nav className={styles.nav}>
+            <ul className={`mx-auto`}>
+                {props.menuItems.map((menuItem: any, i:number) => {
+                    return (
+                        <MenuItem href={menuItem.href} title={menuItem.title} key={i}/>
+                    )
+                })}
+            </ul>
+        </nav>
+    )
+}
+
+export default HeaderMenu

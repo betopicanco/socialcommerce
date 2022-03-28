@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import Logo from "../public/img/icons/logo-besouroz.png"
+import Logo from "../../public/img/icons/logo-besouroz.png"
 
 const Header = () => {
     const styles = {
@@ -8,7 +8,7 @@ const Header = () => {
             fixed top-0 w-full z-50
             flex justify-between
             bg-gradient-to-r from-purple-600 to-violet-500 
-            p-2 sm:p-4 =
+            p-2 sm:p-4
         `,
         h1: `
             inline-flex ml-2 align-top
@@ -31,24 +31,22 @@ const Header = () => {
         `
     }
     
-    const logoSize = '50px'
-
     return (
         <header className={styles.header}>
-            {/* <Link href="/" passHref> */}
-            <div>
-                <div className={`hidden sm:inline-block`}>
-                    <Image
-                        alt="logo"
-                        src={Logo} 
-                        width={styles.image.width} 
-                        height={styles.image.height}
-                    />
+            <Link href="/" passHref>
+                <div className={`cursor-pointer`}>
+                    <div className={`hidden sm:inline-block`}>
+                        <Image
+                            alt="logo"
+                            src={Logo} 
+                            width={styles.image.width} 
+                            height={styles.image.height}
+                        />
+                    </div>
+                    
+                    <h1 className={styles.h1}>BesouroZ</h1>
                 </div>
-                
-                <h1 className={styles.h1}>BesouroZ</h1>
-            </div>
-            {/* </Link> */}
+            </Link>
 
             <div className={styles.menuIcon}>
                 <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} fill="none" 
