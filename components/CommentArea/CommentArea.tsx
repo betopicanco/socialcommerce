@@ -1,7 +1,6 @@
 import { useState } from "react"
 import NewComment from "./NewComment"
 import Comments from './Comments'
-import Comment from "../../core/Comment"
 
 const CommentArea = (props: any) => {
 

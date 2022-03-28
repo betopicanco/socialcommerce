@@ -58,7 +58,7 @@ const Post = (props: any) => {
 
             <div className={styles.img}>
                 <Image 
-                    src={image} layout="responsive"  
+                    src={image} alt={image} layout="responsive"  
                     width={100} height={50}/>
             </div>
 
