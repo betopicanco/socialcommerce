@@ -20,7 +20,7 @@ const Post = (props: any) => {
 
     const styles = {
         post: `
-            py-4
+            pt-4
             border-b border-neutral-600
         `,
         type: `
@@ -62,7 +62,7 @@ const Post = (props: any) => {
                     width={100} height={50}/>
             </div>
 
-            <div className={`px-4`}>
+            <div className={`px-4 pb-4`}>
                 <Icons liked={liked} comment={comment} setLiked={setLiked} setComment={setComment}/>
 
                 <p className={styles.title}>

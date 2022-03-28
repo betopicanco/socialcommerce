@@ -10,11 +10,11 @@ const Icons = (props: IconsProps) => {
     const styles = {
         icons: `
             stroke-1 stroke-yellow-300 mr-2
-            h-5 w-5
+            h-6 w-6
         `,
         iconsFill: `
             fill-yellow-300 
-            h-5 w-5
+            h-6 w-6
         `
     }
 
