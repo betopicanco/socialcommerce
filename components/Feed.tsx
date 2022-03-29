@@ -4,7 +4,6 @@ const Feed = () => {
 
     const styles = {
         feed: `
-            container 
             mt-12 sm:mt-20
             mx-auto md:w-2/3
             border-x border-neutral-600

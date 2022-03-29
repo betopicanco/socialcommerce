@@ -18,6 +18,7 @@ const Layout = (props:any) => {
             {visibleMenu ? (
                 <HeaderMenu menuItems={menuItems}/>
             ) : ''}
+            
             {props.children}
         </>
     )

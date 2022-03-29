@@ -9,8 +9,8 @@ const HeaderMenu = (props:any) => {
     const styles = {
         nav: `
             flex fixed right-0 z-40 w-20 
-            bg-neutral-700/60 rounded-b-lg
-            border-b border-l border-r border-neutral-700
+            bg-violet-700/20 rounded-b-lg 
+            border-b border-l border-r border-violet-700
         `
     }
 

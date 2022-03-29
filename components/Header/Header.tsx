@@ -13,7 +13,7 @@ const Header = (props: any) => {
             fixed top-0 w-full z-50
             flex justify-between
             bg-gradient-to-r from-purple-600 to-violet-500 
-            p-2 sm:p-4
+            p-2 sm:p-4 
         `,
         h1: `
             inline-flex ml-2 align-top
