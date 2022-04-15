@@ -14,6 +14,7 @@ const Feed = () => {
     return (
         <div id="feed" className={styles.feed}>
             <Post 
+                liked={false}
                 type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/cuphead.jpg'}
@@ -21,6 +22,7 @@ const Feed = () => {
             />
 
             <Post 
+                liked={false}
                 type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/batman.jpg'}
@@ -28,6 +30,7 @@ const Feed = () => {
             />
             
             <Post 
+                liked={false}
                 type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/moon-knight.jpg'}

@@ -1,22 +1,24 @@
 import Image from "next/image"
 import { useState } from "react"
 
-import CommentArea from "./CommentArea/CommentArea"
-import Icons from "./Icons"
+import CommentArea from "../CommentArea/CommentArea"
+import Icons from "../Icons"
+import Date from "./Date"
+import Title from "./Title"
+import Type from "./Type"
 
 interface PostProps {
-    genre: string,
-    date: string
+    type: string,
+    date: string,
     img: string,
     title: string,
-    content: string,
+    liked: boolean
 }
 
-const Post = (props: any) => {
-    
+const Post = (props: PostProps) => {
     const [liked, setLiked] = useState<boolean>(props.liked ?? false)
     const [comment, setComment] = useState<boolean>(false)
-    const image = props.img
+    const { type, date, title, img } = props
 
     const styles = {
         post: `
@@ -36,51 +38,45 @@ const Post = (props: any) => {
         title: `
             text-xs leading-2
             sm:text-base
-        `,
-        content: `
-        
-        `  
+        `
     }
-
-
 
     return (
         <div className={styles.post}>
             <div className={`flex justify-between px-4`}>
-                <h2 className={styles.type}>
-                    {props.type}
-                </h2>
-                
-                <span className={styles.date}>
-                    {props.date}
-                </span>
+                <Type style={styles.type} >
+                    {type}
+                </Type>
+
+                <Date style={styles.date} >
+                    {date}
+                </Date>
             </div>
 
             <div className={styles.img}>
                 <Image 
-                    src={image} alt={image} layout="responsive"  
-                    width={100} height={50}/>
+                    src={img} alt={img} layout="responsive"  
+                    width={100} height={50}
+                />
             </div>
 
             <div className={`px-4 pb-4`}>
-                <Icons liked={liked} comment={comment} setLiked={setLiked} setComment={setComment}/>
+                <Icons 
+                    liked={liked} 
+                    comment={comment} 
+                    setLiked={setLiked} 
+                    setComment={setComment}
+                />
 
-                <p className={styles.title}>
-                    {props.title}
-                </p>
-                <p className={styles.content}>
-
-                </p>
-
+                <Title style={styles.title} >
+                    {title}
+                </Title>
                 
             </div>
 
-            <div>
-                {comment ? (
-                    <CommentArea/>
-                ) : ''}
-            </div>
-            
+            {comment ? (
+                <CommentArea/>
+            ) : ''}
         </div>
     )
 }

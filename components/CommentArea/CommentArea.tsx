@@ -12,7 +12,7 @@ const CommentArea = (props: any) => {
         `
     }
     let currentComments = [
-        {author: 'Fulano', content: 'Muito Bom'},
+        {author: 'Fulano', content: 'Muito'},
         {author: 'Siclano', content: 'Gostei'},
         {author: 'Beltrano', content: 'Incrível'}
     ]

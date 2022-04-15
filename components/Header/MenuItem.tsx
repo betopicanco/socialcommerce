@@ -12,7 +12,7 @@ const MenuItem = (props: any) => {
             bg-violet-500 text-yellow-200 
             border border-yellow-300
             rounded-lg text-center
-            py-1 px-2 m-2
+            py-1 px-2 m-2 cursor-pointer
         `
     }
 
