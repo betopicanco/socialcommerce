@@ -4,7 +4,7 @@ interface HomeIconProps {
 
 const HomeIcon = (props: HomeIconProps) => {
     const  style  = `
-        fill-neutral-400
+        fill-yellow-300
         h-6 sm:h-10
         w-6 sm:w-10
     `;

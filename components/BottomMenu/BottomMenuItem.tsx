@@ -12,7 +12,7 @@ const BottomMenuItem = (props: BottomMenuItemProps ) => {
     `
 
     return (
-        <Link href={href}>
+        <Link href={href} passHref>
             <div className={style}>
                 {children}
             </div>  

@@ -9,29 +9,33 @@ interface BottomMenuProps {
 }
 
 const BottomMenu = (props: BottomMenuProps) => {
-    const iconStyle = `
-        stroke-neutral-400
-        h-6 sm:h-10
-        w-6 sm:w-10
-    `;
-    
-    return (
-        <nav className={`
+    const style = {
+        nav: `
             fixed bottom-0 w-full md:hidden
             bg-neutral-800/70
             border-t border-neutral-600 rounded-t-lg
             p-2 flex justify-center
-        `}>
+        `,
+        icon: `
+            stroke-1
+            stroke-yellow-300
+            h-6 sm:h-10
+            w-6 sm:w-10
+        `
+    }
+    
+    return (
+        <nav className={style.nav}>
             <BottomMenuItem href='/test'>
-                <Camera style={iconStyle}/> 
+                <Camera style={style.icon}/> 
             </BottomMenuItem>
             
             <BottomMenuItem href='/'>
-                <HomeIcon style={iconStyle}/>
+                <HomeIcon style={style.icon}/>
             </BottomMenuItem>
 
             <BottomMenuItem href='/test'>
-                <ShoppingBag style={iconStyle}/>
+                <ShoppingBag style={style.icon}/>
             </BottomMenuItem>
         </nav>
     )
