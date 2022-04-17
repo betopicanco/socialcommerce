@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Logo from "../../public/img/icons/logo-besouroz.png"
+import MenuIcon from "../Icons/MenuIcon"
 
 interface HeaderProps {
     visibleMenu: boolean,
@@ -28,11 +29,6 @@ const Header = (props: any) => {
         menuIcon: `
             p-1 rounded-md bg-violet-400 
             cursor-pointer drop-shadow-md
-        `,
-        svg: `
-            stroke-yellow-300 
-            h-6 sm:h-10
-            w-6 sm:w-10
         `
     }
     
@@ -54,10 +50,7 @@ const Header = (props: any) => {
             </Link>
 
             <div className={styles.menuIcon} onClick={() => props.setVisibleMenu(!props.visibleMenu)}>
-                <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} fill="none" 
-                    viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <MenuIcon />
             </div>
         </header>    
     )
