@@ -9,7 +9,7 @@ const BottomMenuItem = (props: BottomMenuItemProps ) => {
     const { children, href } = props;
     const style = `
         p-1 mx-2
-    `
+    `;
 
     return (
         <Link href={href} passHref>

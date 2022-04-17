@@ -9,7 +9,6 @@ const SignUpMain = (props: SignUpMainProps) => {
     const { children } = props;
     const styles = {
         main: `
-            mt-12 sm:mt-20
             mx-auto md:w-2/3
             flex justify-center items-center h-4/5
         `,

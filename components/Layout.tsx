@@ -19,7 +19,9 @@ const Layout = (props:any) => {
                 <HeaderMenu menuItems={menuItems}/>
             ) : ''}
             
-            {props.children}
+            <div className={`mt-12 sm:mt-20`}>
+                {props.children}
+            </div>
         </>
     )
 

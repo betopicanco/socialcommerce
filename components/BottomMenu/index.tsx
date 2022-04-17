@@ -1,5 +1,6 @@
 import Camera from "../Icons/Camera"
 import HomeIcon from "../Icons/HomeIcon"
+import Plus from "../Icons/Plus"
 import ShoppingBag from "../Icons/ShoppingBag"
 import ShoppingCart from "../Icons/ShoppingCart"
 import BottomMenuItem from "./BottomMenuItem"
@@ -14,7 +15,7 @@ const BottomMenu = (props: BottomMenuProps) => {
             fixed bottom-0 w-full md:hidden
             bg-neutral-800/70
             border-t border-neutral-600 rounded-t-lg
-            p-2 flex justify-center
+            p-2 flex justify-center 
         `,
         icon: `
             stroke-1
@@ -26,8 +27,8 @@ const BottomMenu = (props: BottomMenuProps) => {
     
     return (
         <nav className={style.nav}>
-            <BottomMenuItem href='/test'>
-                <Camera style={style.icon}/> 
+            <BottomMenuItem href='/publish'>
+                <Plus style={style.icon}/>
             </BottomMenuItem>
             
             <BottomMenuItem href='/'>

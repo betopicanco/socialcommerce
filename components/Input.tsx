@@ -1,3 +1,5 @@
+import Label from "./Label";
+
 interface InputProps {
     id: string,
     type: string,
@@ -6,7 +8,7 @@ interface InputProps {
 
 const Input = (props: InputProps) => {
     const { id, type, label } = props;
-    const styles = {
+    const style = {
         div: `
             my-4
         `,
@@ -15,22 +17,20 @@ const Input = (props: InputProps) => {
             caret-yellow-400
             focus:outline-none
             focus:ring focus:ring-purple-300
-            pl-3 p-1
-        `,
-        label: `
-            text-violet-500
+            pl-3 p-1 mt-1
         `
     }
 
     return (
-        <div className={styles.div}>
-            <label className={styles.label} htmlFor={id}>
-                <strong>{label}</strong>
-            </label>
+        <div className={style.div}>
+            <Label id={id} content={label}/>
 
             <br />
 
-            <input className={styles.input} type={type} id={id}/>
+            <input 
+                type={type} id={id}
+                className={style.input} 
+            />
         </div>
     )
 }

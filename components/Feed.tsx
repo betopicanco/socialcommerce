@@ -4,7 +4,8 @@ const Feed = () => {
 
     const styles = {
         feed: `
-            mt-12 sm:mt-20 pb-12
+            mt-12 sm:mt-20 
+            pb-12 sm:pb-20
             mx-auto md:w-2/3
             border-x border-neutral-600
             text-white
