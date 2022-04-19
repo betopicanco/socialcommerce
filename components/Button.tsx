@@ -4,10 +4,12 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
     const style =  `
-        bg-violet-700 px-4 py-1 
-        rounded-md border-2 border-violet-400
-        text-lg drop-shadow-md
-        text-white w-min mx-auto
+        bg-violet-500  
+        rounded-md
+        border-2 border-yellow-300
+        text-lg text-white
+        drop-shadow-md
+        w-min mx-auto px-4 py-1
         active:bg-purple-500
     `;
     const { content } = props;

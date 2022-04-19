@@ -9,9 +9,9 @@ const MenuItem = (props: any) => {
 
     const styles = {
         li: `
-            bg-violet-600
-            rounded-lg
-            border border-purple-400
+            bg-violet-500
+            rounded-md
+            border border-yellow-300
             text-center text-white
             py-1 px-2 m-2 
             cursor-pointer
