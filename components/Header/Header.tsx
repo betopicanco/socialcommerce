@@ -27,7 +27,7 @@ const Header = (props: any) => {
             height: '40px'
         },
         menuIcon: `
-            p-1 rounded-md bg-violet-400 
+            p-1 rounded-md bg-violet-400/30 
             cursor-pointer drop-shadow-md
         `
     }

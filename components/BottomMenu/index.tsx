@@ -13,7 +13,7 @@ const BottomMenu = (props: BottomMenuProps) => {
     const style = {
         nav: `
             fixed bottom-0 w-full md:hidden
-            bg-neutral-800/70
+            bg-neutral-800
             border-t border-neutral-600 rounded-t-lg
             p-2 flex justify-center 
         `,
