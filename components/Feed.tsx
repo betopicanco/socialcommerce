@@ -34,7 +34,6 @@ const Feed = () => {
             img: '/img/capas/batman.jpg',
             title: 'Eu com 10 anos quando brincava de pique-esconde:'
         }
-
     ]
 
     return (
