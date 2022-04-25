@@ -36,16 +36,16 @@ const Header = (props: any) => {
         <header className={styles.header}>
             <Link href="/" passHref>
                 <div className={`cursor-pointer`}>
-                    <div className={`hidden sm:inline-block`}>
+                    {/* <div className={`hidden sm:inline-block`}>
                         <Image
                             alt="logo"
                             src={Logo} 
                             width={styles.image.width} 
                             height={styles.image.height}
                         />
-                    </div>
+                    </div> */}
                     
-                    <h1 className={styles.h1}>BesouroZ</h1>
+                    <h1 className={styles.h1}>SocialCommerce</h1>
                 </div>
             </Link>
 

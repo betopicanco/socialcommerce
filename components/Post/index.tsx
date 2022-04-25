@@ -4,11 +4,16 @@ import { useState } from "react"
 import CommentArea from "../CommentArea/CommentArea"
 import Icons from "../Icons"
 import Date from "./Date"
+import ProfileName from "./ProfileName"
+import ProfilePic from "./ProfilePic"
 import Title from "./Title"
-import Type from "./Type"
 
 interface PostProps {
-    type: string,
+    key:number,
+    author: {
+        profilePic: string,
+        profileName: string
+    },
     date: string,
     img: string,
     title: string,
@@ -18,16 +23,12 @@ interface PostProps {
 const Post = (props: PostProps) => {
     const [liked, setLiked] = useState<boolean>(props.liked ?? false)
     const [comment, setComment] = useState<boolean>(false)
-    const { type, date, title, img } = props
+    const { author, date, title, img } = props
 
     const styles = {
         post: `
             pt-4
             border-b border-neutral-600
-        `,
-        type: `
-            inline-flex py-1 px-2 rounded
-            bg-yellow-300 text-black font-bold
         `,
         date: `
             inline-flex text-xs py-2 text-neutral-400
@@ -44,9 +45,10 @@ const Post = (props: PostProps) => {
     return (
         <div className={styles.post}>
             <div className={`flex justify-between px-4`}>
-                <Type style={styles.type} >
-                    {type}
-                </Type>
+                <div className={`flex`}>
+                    <ProfilePic pic={author.profilePic}/>
+                    <ProfileName name={author.profileName}/>
+                </div>
 
                 <Date style={styles.date} >
                     {date}

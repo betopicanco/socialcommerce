@@ -12,19 +12,52 @@ const Feed = () => {
         `
     }
 
+    const posts = [
+        {
+            id: 1,
+            author: {
+                profilePic: '/img/profile_pic/logo_besouroz.jpg',
+                profileName: 'besouroZ'
+            },
+            liked: false,
+            date: '24/03/2022',
+            img: '/img/capas/cuphead.jpg',
+            title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022'
+        }, {
+            id: 2,
+            author: {
+                profilePic: '/img/profile_pic/betopicanco.jpg',
+                profileName: 'betopicanco'
+            },
+            liked: false,
+            date: '24/03/2022',
+            img: '/img/capas/batman.jpg',
+            title: 'Eu com 10 anos quando brincava de pique-esconde:'
+        }
+
+    ]
+
     return (
         <div id="feed" className={styles.feed}>
-            <Post 
+            {posts.map((p) => (
+                <Post
+                    key={p.id}
+                    author={p.author}
+                    liked={p.liked}
+                    date={p.date}
+                    img={p.img}
+                    title={p.title}
+                />
+            ))}
+            {/* <Post 
                 liked={false}
-                type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/cuphead.jpg'}
                 title={'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022'}
-            />
+            /> */}
 
-            <Post 
+            {/* <Post 
                 liked={false}
-                type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/batman.jpg'}
                 title={'Eu com 10 anos quando brincava de pique-esconde:'}
@@ -32,11 +65,10 @@ const Feed = () => {
             
             <Post 
                 liked={false}
-                type={'Filmes'} 
                 date={'24/03/2022'}
                 img={'/img/capas/moon-knight.jpg'}
                 title={'Cavaleiro da Lua | Marvel'}
-            />
+            /> */}
         </div>
     )
 }
