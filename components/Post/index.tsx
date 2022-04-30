@@ -17,7 +17,8 @@ interface PostProps {
     date: string,
     img: string,
     title: string,
-    liked: boolean
+    liked: boolean,
+    isProduct: boolean
 }
 
 const Post = (props: PostProps) => {
@@ -68,6 +69,7 @@ const Post = (props: PostProps) => {
                     comment={comment} 
                     setLiked={setLiked} 
                     setComment={setComment}
+                    isProduct={props.isProduct}
                 />
 
                 <Title style={styles.title} >

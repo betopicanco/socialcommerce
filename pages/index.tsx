@@ -6,9 +6,9 @@ import Layout from '../components/Layout'
 
 const Home: NextPage = () => {
     const menuItems = [
-        { href: '/test',  title: 'teste' },
+        {href: '/test', title: 'teste'},
         {href: '/login', title: 'login'}
-    ]
+    ];
 
     return (
         <div className={`bg-neutral-800`}>
@@ -20,4 +20,4 @@ const Home: NextPage = () => {
     )
 }
 
-export default Home
+export default Home;
