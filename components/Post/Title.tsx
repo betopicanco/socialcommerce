@@ -1,15 +1,14 @@
-interface TitleProps {
-    children: string,
-    style: string
-}
+const Title = (props: {children: string}) => {
+  const { children } = props;
 
-const Title = (props: TitleProps) => {
-    const { children, style } = props
-    return (
-        <p className={style}>
-            {children}
-        </p>
-    )
-}
+  return (
+    <p className={`
+      text-xs leading-2
+      sm:text-base
+    `}>
+      {children}
+    </p>
+  );
+};
 
-export default Title
+export default Title;

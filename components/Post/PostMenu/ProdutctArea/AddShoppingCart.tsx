@@ -1,4 +1,4 @@
-import ShoppingCart from "../../Icons/ShoppingCart";
+import ShoppingCart from "../../../Icons/ShoppingCart";
 
 const AddShoppingCart = () => {
   return (

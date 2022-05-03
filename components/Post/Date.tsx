@@ -1,16 +1,14 @@
-interface DateProps {
-    children: string,
-    style: string
-}
+const Date = (props: {children: string}) => {
+  const { children } = props;
 
-const Date = (props: DateProps) => {
-    const { style, children } = props
+  return (
+    <span className={`
+      inline-flex py-2 
+      text-xs text-neutral-400
+    `}>
+      {children}
+    </span>
+  );
+};
 
-    return (
-        <span className={style}>
-            {children}
-        </span>
-    )
-}
-
-export default Date
+export default Date;
