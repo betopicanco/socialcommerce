@@ -1,15 +1,9 @@
-import Camera from "../Icons/Camera"
 import HomeIcon from "../Icons/HomeIcon"
 import Plus from "../Icons/Plus"
 import ShoppingBag from "../Icons/ShoppingBag"
-import ShoppingCart from "../Icons/ShoppingCart"
 import BottomMenuItem from "./BottomMenuItem"
 
-interface BottomMenuProps {
-
-}
-
-const BottomMenu = (props: BottomMenuProps) => {
+const BottomMenu = () => {
     const style = {
         nav: `
             fixed bottom-0 w-full md:hidden

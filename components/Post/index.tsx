@@ -35,35 +35,39 @@ const Post = (props: PostProps) => {
     } = props;
 
     return (
-      <ThemeContext.Provider value={theme}>
-        <div className={`pt-4 border-b border-neutral-600`}>
-          <div className={`flex justify-between px-4`}>
-            <ProfileInfo profile={profile}/>
+      <div className={`
+        pt-4 border-b border-neutral-600
+      `}>
+        <div className={`flex justify-between px-4`}>
+          <ProfileInfo profile={profile} picSize={32}/>
 
-            <Date children={date}/>
-          </div>
-
-          <div className={`my-2 x-0`} onClick={() => setPriceVisible(true)} >
-            <Picture pic={picture}/>
-          </div>
-
-          <div className={`px-4 pb-4`}>
-            <PostMenu 
-              liked={liked} 
-              comment={comment} 
-              setLiked={setLiked} 
-              setComment={setComment}
-              isProduct={props.isProduct}
-              priceVisible={priceVisible}
-              inCart={inCart}
-            />
-
-            <Title children={title}/>
-          </div>
-
-          {comment ? ( <CommentArea/> ) : ''}
+          <Date>
+            {date}
+          </Date>
         </div>
-      </ThemeContext.Provider>
+
+        <div className={`my-2 x-0`} onClick={() => setPriceVisible(true)} >
+          <Picture pic={picture}/>
+        </div>
+
+        <div className={`px-4 pb-4`}>
+          <PostMenu 
+            liked={liked} 
+            comment={comment} 
+            setLiked={setLiked} 
+            setComment={setComment}
+            isProduct={props.isProduct}
+            priceVisible={priceVisible}
+            inCart={inCart}
+          />
+
+          <Title>
+            {title}
+          </Title>
+        </div>
+
+        {comment ? ( <CommentArea/> ) : ''}
+      </div>
     );
 };
 

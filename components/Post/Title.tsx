@@ -3,7 +3,9 @@ const Title = (props: {children: string}) => {
 
   return (
     <p className={`
-      text-xs leading-2
+      text-xs 
+      text-white
+      leading-2
       sm:text-base
     `}>
       {children}

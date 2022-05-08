@@ -45,7 +45,7 @@ const Feed = () => {
             picture: '/img/capas/cuphead.jpg',
             title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
             isProduct: false
-        }, 
+        }
     ];
 
   return (

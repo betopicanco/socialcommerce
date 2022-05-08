@@ -1,15 +1,15 @@
 import Image from "next/image";
 
-const ProfilePic = (props: {pic: string}) => {
-  const { pic } = props;
+const ProfilePic = (props: {pic: string, size: number}) => {
+  const { pic, size } = props;
   
   return (
-    <span>
+    <span className={"align-middle"}>
       <Image
         src={pic}
         alt={pic}
-        width={32}
-        height={33}
+        width={size}
+        height={size}
         className={`rounded-full`}
       />
     </span>

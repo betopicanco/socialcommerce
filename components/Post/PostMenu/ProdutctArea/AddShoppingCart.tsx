@@ -1,10 +1,10 @@
-import ShoppingCart from "../../../Icons/ShoppingCart";
+import ShoppingCartPlus from "../../../Icons/ShoppingCartPlus";
 
 const AddShoppingCart = () => {
   return (
     <div className={`pt-1`}>
-      <ShoppingCart style={`
-        stroke-1 stroke-yellow-300 
+      <ShoppingCartPlus style={`
+        fill-yellow-300 
         h-5 w-5
       `}/>
     </div>

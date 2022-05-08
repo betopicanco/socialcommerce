@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const FinalizePurchase = () => {
   return (
-    <div>
-      Finalizar compra
-    </div>
+    <Link href={'/cart'} passHref>
+      Finalizar Compra
+    </Link>
   );
 };
 

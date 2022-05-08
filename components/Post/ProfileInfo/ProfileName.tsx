@@ -3,7 +3,9 @@ const ProfileName = (props: {children: string}) => {
   
   return (
     <span className={`
-      text-white pl-2 leading-8 text-sm
+      text-white pl-2 
+      leading-7 text-sm
+      align-middle
     `}>
       { children }
     </span>
