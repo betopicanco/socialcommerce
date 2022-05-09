@@ -11,8 +11,10 @@ const Cart:NextPage = () => {
   return (
     <div className={`bg-neutral-800`}>
       <Layout menuItems={menuItems}>
-        <CartMain/>
-        <BottomMenu/>
+        <>
+          <CartMain/>
+          <BottomMenu/>
+        </>
       </Layout>
     </div>
   );

@@ -9,18 +9,16 @@ const Home: NextPage = () => {
     const menuItems = [
         {href: '/test', title: 'teste'},
         {href: '/login', title: 'login'},
-        {href: '/cart', 
-        title: <ShoppingCart style={`
-          fill-yellow-300
-          w-6 h-6
-        `}/>}
+        {href: '/cart', title: 'compras'}
     ];
 
     return (
         <div className={`bg-neutral-800`}>
             <Layout menuItems={menuItems}>
+              <>
                 <Feed />
                 <BottomMenu/>
+              </>
             </Layout>
         </div>
     )

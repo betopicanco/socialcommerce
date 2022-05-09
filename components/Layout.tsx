@@ -1,30 +1,42 @@
 import { useState } from "react"
 import Header from "./Header/Header"
 import HeaderMenu from "./Header/HeaderMenu"
+import LayoutContext from "../Context/LayoutProvider/context";
 
 interface LayoutProps {
-    menuItems: {},
+    menuItems: {
+      href:string,
+      title:string
+    }[],
+    children:JSX.Element
 }
 
-const Layout = (props:any) => {
+const Layout = (props:LayoutProps) => {
+  const { menuItems, children } = props;
+  const [visibleMenu, setVisibleMenu] = useState(false);
+  const [notifCounter, setNotifCounter] = useState(0);
 
-    const menuItems = props.menuItems
-    const [visibleMenu, setVisibleMenu] = useState(false)
+  return (
+    <LayoutContext.Provider 
+      value={{
+        visibleMenu, 
+        setVisibleMenu,
+        notifCounter,
+        setNotifCounter
+      }}>
+      <>
+        <Header />
 
-    return (
-        <>
-            <Header visibleMenu={visibleMenu} setVisibleMenu={setVisibleMenu}/>
+        {visibleMenu ? (
+          <HeaderMenu menuItems={menuItems}/>
+        ) : ''}
 
-            {visibleMenu ? (
-                <HeaderMenu menuItems={menuItems}/>
-            ) : ''}
-            
-            <div className={`mt-12 sm:mt-20`}>
-                {props.children}
-            </div>
-        </>
-    )
-
+        <div className={`mt-12 sm:mt-20`}>
+          {children}
+        </div>
+      </>
+    </LayoutContext.Provider>
+  );
 }
 
-export default Layout
+export default Layout;

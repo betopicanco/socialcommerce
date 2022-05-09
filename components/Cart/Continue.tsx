@@ -11,7 +11,7 @@ const Continue = (props: {total: number}) => {
         flex mb-10 pb-6
     `}>
       <div className={` 
-        ml-4 mt-2 w-1/2
+        ml-4 mt-2 w-3/5
         text-yellow-300 text-sm`}>
         <div>
           total:
