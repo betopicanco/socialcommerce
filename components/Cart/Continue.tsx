@@ -9,6 +9,7 @@ const Continue = (props: {total: number}) => {
         border border-purple-700
         w-full fixed bottom-0
         flex mb-10 pb-6
+        backdrop-blur-sm
     `}>
       <div className={` 
         ml-4 mt-2 w-3/5
@@ -30,7 +31,7 @@ const Continue = (props: {total: number}) => {
           passHref>
           <strong className={`
           text-white p-2 rounded-md
-            bg-violet-700
+          bg-blue-700/70
           `}>
             Continuar
           </strong>
