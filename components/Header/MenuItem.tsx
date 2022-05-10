@@ -1,30 +1,40 @@
 import Link from 'next/link'
 
 interface ItemMenuProps {
-    title: string,
-    href: string
+  key: number
+  title: string,
+  href: string
+  icon?: JSX.Element
 }
 
-const MenuItem = (props: any) => {
+const MenuItem = (props: ItemMenuProps) => {
+  const {
+    key,
+    href,
+    title,
+    icon
+  } = props;
 
-    const styles = {
-        li: `
-            bg-violet-500
-            rounded-md
-            border border-yellow-300
-            text-center text-white
-            py-1 px-2 m-2 
-            cursor-pointer
-        `
-    }
-
-    return (
-        <li className={styles.li} key={props.key}>
-            <Link href={props.href} passHref>
-                <strong>{props.title}</strong>
-            </Link>
-        </li>
-    )
+  return (
+    <Link href={href} passHref>
+      <li key={key} 
+        className={`
+          bg-purple-700/90
+          rounded-md
+          border border-violet-500
+          text-white
+          py-1 mx-2 my-4
+          cursor-pointer
+          flex justify-center
+        `}>
+          <span className='flex'>
+            <strong>{title}</strong>
+            <span className='ml-1 pt-1'>{icon}</span>
+          </span>
+          
+      </li>
+    </Link>
+  );
 }
 
-export default MenuItem
+export default MenuItem;

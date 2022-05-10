@@ -6,7 +6,8 @@ import LayoutContext from "../Context/LayoutProvider/context";
 interface LayoutProps {
     menuItems: {
       href:string,
-      title:string
+      title:string,
+      icon?: JSX.Element
     }[],
     children:JSX.Element
 }
@@ -22,13 +23,14 @@ const Layout = (props:LayoutProps) => {
         visibleMenu, 
         setVisibleMenu,
         notifCounter,
-        setNotifCounter
+        setNotifCounter,
+        menuItems
       }}>
       <>
         <Header />
 
         {visibleMenu ? (
-          <HeaderMenu menuItems={menuItems}/>
+          <HeaderMenu />
         ) : ''}
 
         <div className={`mt-12 sm:mt-20`}>

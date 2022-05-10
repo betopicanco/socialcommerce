@@ -4,8 +4,11 @@ import LayoutContext from "../../Context/LayoutProvider/context";
 import NotificationCounter from "../NotificationCounter";
 
 const MenuIcon = () => {
-  const { visibleMenu, setVisibleMenu } = useContext(LayoutContext);
-  const { notifCounter } = useContext(LayoutContext);
+  const { 
+    visibleMenu, 
+    setVisibleMenu,
+    notifCounter 
+  } = useContext(LayoutContext);
 
   return (
     <div className={`

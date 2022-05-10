@@ -11,8 +11,8 @@ const Header = () => {
         `,
         h1: `
             inline-flex ml-2 align-top
-            text-yellow-200 text-4xl font-bold
-            text-2xl sm:text-3xl
+            text-yellow-200 font-bold
+            text-xl sm:text-3xl
             hover:text-yellow-300
         `,
         image: {
