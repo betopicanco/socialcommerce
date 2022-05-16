@@ -31,7 +31,6 @@ const MenuItem = (props: ItemMenuProps) => {
             <strong>{title}</strong>
             <span className='ml-1 pt-1'>{icon}</span>
           </span>
-          
       </li>
     </Link>
   );

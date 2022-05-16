@@ -1,13 +1,9 @@
-import { useContext } from "react";
-import ThemeContext from "../Post/ThemeContext";
-
 const HeartStroke = () => {
-  const { color } = useContext(ThemeContext);
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       className={`
-        stroke-1 stroke-${color.yellow}
+        stroke-1 stroke-yellow-300
       `} 
       fill="none"
       viewBox="0 0 24 24"

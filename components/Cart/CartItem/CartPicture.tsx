@@ -3,9 +3,7 @@ import Image from "next/image";
 const CartPicture = (props: {pic: string}) => {
   const { pic } = props;
   return (
-    <div className={`
-      w-2/3
-    `}>
+    <div className='w-2/5'>
       <Image 
         src={pic}
         alt={pic}

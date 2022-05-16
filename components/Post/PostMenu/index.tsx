@@ -5,28 +5,22 @@ import ShowCommentArea from "./ShowCommentArea";
 import SharePost from "./SharePost";
 
 interface PostMenuProps {
-    liked: boolean,
-    comment: boolean,
-    setLiked: (value:boolean) => void,
-    setComment: (value:boolean) => void,
-    isProduct?: boolean | false,
-    priceVisible: boolean,
-    inCart: boolean,
+  showComment: boolean,
+  setShowComment: (value:boolean) => void,
+  isProduct?: boolean | false,
+  priceVisible: boolean,
+  inCart: boolean,
 };
 
 const PostMenu = (props: PostMenuProps) => {
-  const liked: boolean = props.liked ?? false;
-
+  
   return (
       <div className={`w-full flex justify-between my-2`}>
         <div className={`flex`}>
-          <Like
-            liked={liked} 
-            setLiked={props.setLiked}
-          />
+          <Like />
 
           <ShowCommentArea
-            onClick={() => props.setComment?.(!props.comment)}
+            onClick={() => props.setShowComment?.(!props.showComment)}
           />
 
           <SharePost />

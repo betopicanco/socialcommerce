@@ -1,15 +1,21 @@
-const Title = (props: {children: string}) => {
-  const { children } = props;
+import Link from "next/link";
+
+const Title = (props: {children: string, id: number}) => {
+  const { children, id } = props;
 
   return (
-    <p className={`
-      text-xs 
-      text-white
-      leading-2
-      sm:text-base
-    `}>
-      {children}
-    </p>
+    <Link 
+      href={`/post/${id}`}
+      passHref>
+      <p className={`
+        text-xs 
+        text-white
+        leading-2
+        sm:text-base
+      `}>
+        {children}
+      </p>
+    </Link>
   );
 };
 

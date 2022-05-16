@@ -1,13 +1,8 @@
-import { useContext } from "react";
-import ThemeContext from "../Post/ThemeContext";
-
 const HeartFill = () => {
-  const { color } = useContext(ThemeContext);
-  
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      className={` fill-${color.yellow} `} 
+      className={` fill-yellow-300 `} 
       viewBox="0 0 20 20"
       fill="currentColor"
     >

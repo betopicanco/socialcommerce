@@ -1,23 +1,22 @@
+import { useContext, useState } from "react";
+
+import PostContext from "../../../Context/PostProvider";
 import HeartFill from "../../Icons/HeartFill";
 import HeartStroke from "../../Icons/HeartStroke";
 
-interface HeartProps {
-    liked: boolean,
-    setLiked: (liked: boolean) => void
-}
-
-const Heart = (props: HeartProps) => {
-    const { liked} = props;
+const Heart = () => {
+    const { liked } = useContext(PostContext);
+    const [like, setLike] = useState(liked);
 
     return (
-        <div className={`h-6 w-6 mr-2`} onClick={() => props.setLiked?.(!liked)}>
-            {liked ? (
-              <HeartFill />
-            ) : (
-              <HeartStroke />
-            )}
-        </div>
+      <div className={`h-6 w-6 mr-2`} onClick={() => setLike(!like)}>
+        {like ? (
+          <HeartFill />
+        ) : (
+          <HeartStroke />
+        )}
+      </div>
     )
 }
 
-export default Heart
+export default Heart;
