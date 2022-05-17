@@ -1,5 +1,5 @@
+import axios from 'axios';
 import type { NextPage } from 'next';
-import useSWR from 'swr';
 
 import BottomMenu from '../components/BottomMenu';
 import Feed from '../components/Feed';
@@ -8,9 +8,18 @@ import Mail from '../components/Icons/Mail';
 import ShoppingCart from '../components/Icons/ShoppingCart';
 import Layout from '../components/Layout';
 
-const fetcher = (url:string) => fetch(url).then((res) => res.json());
+export async function getStaticProps() {
+  const path = 'https://socialcommerce.vercel.app/api/posts/';
+  const props = await axios.get(path);
 
-const Home: NextPage = () => {
+  return {
+    props: {
+      feed: props.data
+    }
+  }
+}
+
+const Home: NextPage = (props: any) => {
   const cart = <ShoppingCart style={` fill-yellow-300 h-4 w-4 `}/>
   const mail = <Mail style={` stroke-yellow-300 h-4 w-4 `}/>
   const login = <LoginIcon style={` stroke-yellow-300 h-4 w-4 `}/>
@@ -21,16 +30,7 @@ const Home: NextPage = () => {
       {href: '/cart', title: 'compras', icon: cart}
   ];
 
-  const path = '/api/posts';
-  const { data: feed, error } = useSWR(path, fetcher);
-
-  if(!feed) {
-    return (
-      <div>
-        <h2>Carregando...</h2>
-      </div>
-    )
-  }
+  const { feed } = props;
 
   return (
     <div className={`bg-neutral-800`}>

@@ -1,27 +1,47 @@
-import { NextPage } from "next";
-import { useRouter } from "next/router";
-import useSWR from "swr";
+import axios from "axios";
+import { GetStaticPropsContext, NextPage } from "next";
 import Mail from "../../components/Icons/Mail";
 import Layout from "../../components/Layout";
 import Post from "../../components/Post";
+import PostInterface from "../../components/Post/interface";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json()) 
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          id: '1'
+        },
+      },
+      {
+        params: {
+          id: '2'
+        },
+      },
+    ],
+    fallback: 'blocking'
+  }
+}
 
-const PostPage: NextPage = () => {
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const id = context.params?.id;
+  const path = `https://socialcommerce.vercel.app/api/posts/${id}`;
+  const props = await axios.get(path);
+
+  return {
+    props: {
+      post: props.data
+    }
+  }
+}
+
+const PostPage: NextPage = (props: any) => {
   const mail = <Mail style='h-4 w-4 stroke-yellow-300'/>
   const menuItems = [
     {href: '/teste', title: 'chat', icon: mail},
   ];
-  const id = useRouter().query.id;
-  const path = `/api/posts/${id}`;
-  const {data: post, error} = useSWR(path, fetcher);
-  if(!post) {
-    return (
-      <div>
-        Carregando...
-      </div>
-    )
-  }
+
+  const { post } = props;
 
   return (
     <Layout menuItems={menuItems}>
