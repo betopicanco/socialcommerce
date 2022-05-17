@@ -2,7 +2,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import data from './data';
 import PostInterface from '../../../components/Post/interface';
 
-const filterPost = (feed: PostInterface[], id: number): PostInterface => {
+const filterPost = (
+  feed: PostInterface[], 
+  id: number
+): PostInterface => {
   const [ post ] = feed.filter((p) => { 
     if(p.id === id) return p;
   });

@@ -8,8 +8,8 @@ const SharePost = () => {
   const share = () => {
     if(navigator.share !== undefined) {
       navigator.share({
-        title: title,
-        text: 'Compartilhando o post',
+        title: 'Social Commerce',
+        text: title,
         url: `https://socialcommerce.vercel.app/post/${id}`
       }).catch((error) => console.log('Error sharing', error));
     }

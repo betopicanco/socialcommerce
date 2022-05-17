@@ -20,7 +20,7 @@ const data = [{
   picture: '/img/capas/fone-jbl.png',
   title: 'Fone de ouvido Over Ear JBL T710',
   isProduct: true
-},{
+}, {
     id: 3,
     profile: {
         pic: '/img/profile_pic/logo_besouroz.jpg',
@@ -31,6 +31,17 @@ const data = [{
     picture: '/img/capas/cuphead.jpg',
     title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
     isProduct: false
+}, {
+  id: 4,
+  profile: {
+    pic: '/img/profile_pic/betopicanco.jpg',
+    name: 'betopicanco'
+  },
+  liked: false,
+  date: '17/05/2022',
+  picture: '/img/capas/alexa.jpg',
+  title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
+  isProduct: true
 }];
 
 export default data;
