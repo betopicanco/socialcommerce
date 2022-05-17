@@ -10,6 +10,7 @@ const Title = (props: {children: string, id: number}) => {
       <p className={`
         text-xs 
         text-white
+        active:text-yellow-400
         leading-2
         sm:text-base
       `}>

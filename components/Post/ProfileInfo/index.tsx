@@ -8,7 +8,6 @@ interface ProfileInfoProps {
 };
 
 const ProfileInfo = (props: ProfileInfoProps) => {
-  // const { pic, name, } = props.profile;
   const { picSize } = props;
   const { profile } = useContext(PostContext);
 

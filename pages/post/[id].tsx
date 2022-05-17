@@ -46,7 +46,7 @@ const PostPage: NextPage = (props: any) => {
   return (
     <Layout menuItems={menuItems}>
       <main className={` bg-neutral-800 text-white`}>
-        <section className={` h-full sm:w-2/3 mx-auto `}>
+        <section className={` h-screen sm:w-2/3 mx-auto `}>
           <Post
             key={post.id}
             data={post}

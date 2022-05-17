@@ -1,8 +1,8 @@
 import Price from "../../Post/PostMenu/ProdutctArea/Price";
 import ProfileInfo from "../../Post/ProfileInfo";
 import Title from "../../Post/Title";
-import AmountControl from "./AmountControl";
 import CartPicture from "./CartPicture";
+import Trash from "../../Icons/Trash";
 
 interface CartItemProps {
   id: number,
@@ -17,44 +17,37 @@ interface CartItemProps {
 
 const CartItem = (props: CartItemProps) => {
   const {
-    profile,
+    id,
     picture,
     title
   } = props;
 
   return (
     <div className={` py-4 `}>
-      {/* <div className={` grid grid-cols-6 `}>
-        <div className={` col-span-4 `}>
-          <CartPicture pic={picture}/>
-        </div>
-
-        <div className={` col-span-2 pl-2 `}>
-          <div className={`grid grid-cols-1 grid-rows-3`}>
-            <AmountControl amount={1}/>
-            <Price price={'299,99'}/> 
-          </div>
-        </div>
-      </div> */}
-      <div className={`flex `}>
+      <div className={` flex `}>
         <CartPicture pic={picture}/>
 
-        <div className={` pl-2 grid grid-cols-2 content-end `}>
+        <div className={` 
+          flex justify-between 
+          w-2/3 pl-2 
+        `}>
           <div>
-            <AmountControl amount={1}/>
+            <ProfileInfo picSize={30}/>
           </div>
-
-          <div className={` ml-2 `}>
+          <div className={``}>
+            <div className={`mb-4 pl-12`}>
+              <Trash/>
+            </div>
             <Price price={'299,99'}/>
           </div>
         </div>
       </div>
 
       <div className="pt-2">
-        {/* <ProfileInfo profile={profile} picSize={30}/>
-        <Title>
+        
+        <Title id={id}>
           {title}
-        </Title> */}
+        </Title>
       </div>
     </div>
   );
