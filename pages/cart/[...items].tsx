@@ -6,6 +6,8 @@ import BottomMenu from "../../components/BottomMenu";
 import ShoppingCart from "../../components/Icons/ShoppingCart";
 import Mail from "../../components/Icons/Mail";
 import LoginIcon from "../../components/Icons/Login";
+import axios from "axios";
+import PostInterface from "../../components/Post/interface";
 
 export async function getStaticPaths() {
   return {
@@ -20,14 +22,32 @@ export async function getStaticPaths() {
   }
 }
 
+// transforma os ids da url em string no formato /1/2
+const toPath = (itemsID: string | string[] | undefined) => {
+  let idList = '';
+  if(typeof itemsID === 'object') {
+    itemsID.forEach(id => {
+      idList += '/' + id  
+    });
+  } else {
+    idList = '/' + itemsID;
+  }
+
+  return idList;
+}
+
 export async function getStaticProps(
   context: GetStaticPropsContext
 ) {
   const itemsID = context.params?.items;
+  
+  const pathIds = toPath(itemsID);
+  const path = `https://socialcommerce.vercel.app/api/cart/${pathIds}`;
+  const cartItems = await axios.get(path);
 
   return {
     props: {
-      items: itemsID
+      items: cartItems.data
     }
   }
 }
@@ -42,12 +62,18 @@ const Cart: NextPage = (props: any) => {
       {href: '/teste', title: 'chat', icon: mail},
       {href: '/cart', title: 'compras', icon: cart}
   ];
+  const { items } = props;
+  console.log(items);
   
   return (
-    <div className={`bg-neutral-800`}>
+    <div className={`bg-neutral-800 h-screen`}>
       <Layout menuItems={menuItems}>
         <>
-          <CartMain/>
+          <main>
+            {/* {items.map((item: PostInterface) => {
+             <p>{item.id}</p>
+            })} */}
+          </main>
           <BottomMenu/>
         </>
       </Layout>

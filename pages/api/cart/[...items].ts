@@ -22,7 +22,7 @@ function handler(
   const { items: itemsId } = req.query;
   const items = filterItems(data, itemsId);
 
-  res.status(200).json({items});
+  res.status(200).json(items);
 }
 
 export default handler;

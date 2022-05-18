@@ -20,6 +20,7 @@ const BottomMenu = () => {
     }
     
     return (
+      <aside>
         <nav className={style.nav}>
             <BottomMenuItem href='/publish'>
                 <Plus style={style.icon}/>
@@ -33,6 +34,7 @@ const BottomMenu = () => {
               <ShoppingBag style={style.icon}/>
             </BottomMenuItem>
         </nav>
+      </aside>
     )
 }
 
