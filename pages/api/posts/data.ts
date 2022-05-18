@@ -8,6 +8,7 @@ const data = [{
   date: '24/03/2022',
   picture: '/img/capas/batman.jpg',
   title: 'Eu com 10 anos quando brincava de pique-esconde:',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Nulla facilisi cras fermentum odio eu feugiat.',
   isProduct: false,
   price: null
 },{
@@ -20,6 +21,7 @@ const data = [{
   date: '24/03/2022',
   picture: '/img/capas/fone-jbl.png',
   title: 'Fone de ouvido Over Ear JBL T710',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales. Vitae sapien pellentesque habitant morbi tristique senectus et. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Adipiscing at in tellus integer feugiat scelerisque. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Tristique senectus et netus et malesuada. A diam maecenas sed enim ut sem viverra aliquet eget. Quis hendrerit dolor magna eget est lorem. Massa sed elementum tempus egestas sed sed. Vulputate eu scelerisque felis imperdiet proin fermentum leo. Sed id semper risus in hendrerit gravida rutrum quisque non. Quam quisque id diam vel quam elementum. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut.',
   isProduct: true,
   price: '299,99'
 }, {
@@ -32,6 +34,7 @@ const data = [{
     date: '24/03/2022',
     picture: '/img/capas/cuphead.jpg',
     title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     isProduct: false,
     price: null
 }, {
@@ -44,6 +47,7 @@ const data = [{
   date: '17/05/2022',
   picture: '/img/capas/alexa.jpg',
   title: 'Alexa',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie nunc non blandit massa enim. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. In dictum non consectetur a erat nam at. Et tortor at risus viverra adipiscing at in.',
   isProduct: true,
   price: '399,99'
 }];

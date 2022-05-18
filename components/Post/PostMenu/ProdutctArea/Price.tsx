@@ -7,14 +7,14 @@ interface PriceProps {
 }
 
 const Price = (props: any) => {
-  // const { price } = useContext(PostContext);
+  const { price } = useContext(PostContext);
   
   return (
     <ProductAreaButton>
       <button>
         <span className={`
         text-yellow-300/70
-        `}>R$ </span>{}
+        `}>R$ </span>{price}
       </button>
     </ProductAreaButton>
   );
