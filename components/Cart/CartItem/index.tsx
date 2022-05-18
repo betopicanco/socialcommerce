@@ -29,7 +29,9 @@ const CartItem = (props: CartItemProps) => {
                 <Trash/>
               </div>
               <div className="h-1/2 flex justify-end">
-                <Price />
+                <div>
+                  <Price/>
+                </div>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import CartItem from "./CartItem";
 import Continue from "./Continue";
 import PostInterface from "../Post/interface";
+import { useState } from "react";
 
 interface CartMainProps {
   cartItems: PostInterface[]
@@ -8,7 +9,7 @@ interface CartMainProps {
 
 const CartMain = (props: CartMainProps) => {
   const { cartItems } = props;
-  // const { total, setTotal } = useState<number>(0);
+  const [total, setTotal] = useState(0);
   
   return (
     <main className="h-screen">

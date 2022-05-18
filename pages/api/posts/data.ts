@@ -23,7 +23,7 @@ const data = [{
   title: 'Fone de ouvido Over Ear JBL T710',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales. Vitae sapien pellentesque habitant morbi tristique senectus et. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Adipiscing at in tellus integer feugiat scelerisque. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Tristique senectus et netus et malesuada. A diam maecenas sed enim ut sem viverra aliquet eget.',
   isProduct: true,
-  price: '299,99'
+  price: 299.99
 }, {
     id: 3,
     profile: {
@@ -49,7 +49,7 @@ const data = [{
   title: 'Alexa',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie nunc non blandit massa enim. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. In dictum non consectetur a erat nam at. Et tortor at risus viverra adipiscing at in.',
   isProduct: true,
-  price: '399,99'
+  price: 399.99
 }];
 
 export default data;
