@@ -3,17 +3,20 @@ import Like from "./Like";
 import FinalizePurchase from "./ProdutctArea/FinalizePurchase";
 import ShowCommentArea from "./ShowCommentArea";
 import SharePost from "./SharePost";
+import Plus from "../../Icons/Plus";
+import { useState } from "react";
 
 interface PostMenuProps {
   showComment: boolean,
   setShowComment: (value:boolean) => void,
   isProduct?: boolean | false,
-  priceVisible: boolean,
   inCart: boolean,
 };
 
 const PostMenu = (props: PostMenuProps) => {
-  
+  const [ showInfo, setShowInfo ] = useState(false);
+  const { isProduct, inCart } = props;
+
   return (
       <div className={`w-full flex justify-between my-2`}>
         <div className={`flex`}>
@@ -25,18 +28,30 @@ const PostMenu = (props: PostMenuProps) => {
 
           <SharePost />
         </div>
-          
-        {props.isProduct && (
-          props.priceVisible && (
-            props.inCart ? (
-              <FinalizePurchase />
-            ) : (
-              <div className={`flex`}>
+
+        <div>
+          {showInfo ? 
+            isProduct && (
+              inCart ? (
+                <FinalizePurchase />
+              ) : (
                 <ProductArea />
-              </div>
+              )
             )
-          )
-        )}
+          : (
+            <div>
+              <Plus
+                onClick={() => setShowInfo(true)}
+                style={` 
+                  h-6 w-6 
+                  stroke-yellow-300 
+                  rounded-full 
+                  active:bg-neutral-700 
+                `}/>
+            </div>
+          )}
+        </div>
+          
       </div>
   );
 };

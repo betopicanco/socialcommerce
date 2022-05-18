@@ -14,7 +14,7 @@ const ProductArea = () => {
   }
 
   return (
-    <>
+    <div className={`flex`}>
       {!inCart ? (
         <div className={`flex`} onClick={handleClick}>
           <Price price={'299,99'}/>
@@ -26,7 +26,7 @@ const ProductArea = () => {
           <FinalizePurchase />
         </ProductAreaButton>
       )}
-    </>
+    </div>
   );
 };
 

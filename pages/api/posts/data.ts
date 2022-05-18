@@ -8,7 +8,8 @@ const data = [{
   date: '24/03/2022',
   picture: '/img/capas/batman.jpg',
   title: 'Eu com 10 anos quando brincava de pique-esconde:',
-  isProduct: false
+  isProduct: false,
+  price: null
 },{
   id: 2,
   profile: {
@@ -19,7 +20,8 @@ const data = [{
   date: '24/03/2022',
   picture: '/img/capas/fone-jbl.png',
   title: 'Fone de ouvido Over Ear JBL T710',
-  isProduct: true
+  isProduct: true,
+  price: '299,99'
 }, {
     id: 3,
     profile: {
@@ -30,7 +32,8 @@ const data = [{
     date: '24/03/2022',
     picture: '/img/capas/cuphead.jpg',
     title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
-    isProduct: false
+    isProduct: false,
+    price: null
 }, {
   id: 4,
   profile: {
@@ -41,7 +44,8 @@ const data = [{
   date: '17/05/2022',
   picture: '/img/capas/alexa.jpg',
   title: 'Alexa',
-  isProduct: true
+  isProduct: true,
+  price: '399,99'
 }];
 
 export default data;

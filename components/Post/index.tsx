@@ -48,7 +48,6 @@ const Post = (props: PostProps) => {
             showComment={showComment} 
             setShowComment={setShowComment}
             isProduct={isProduct}
-            priceVisible={priceVisible}
             inCart={inCart}
           />
 

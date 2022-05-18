@@ -13,6 +13,17 @@ const CartMain = () => {
       date: '24/03/2022',
       picture: '/img/capas/fone-jbl.png',
       title: 'Fone de ouvido Over Ear JBL T710',
+    }, {
+      id: 4,
+      profile: {
+        pic: '/img/profile_pic/betopicanco.jpg',
+        name: 'betopicanco'
+      },
+      liked: false,
+      date: '17/05/2022',
+      picture: '/img/capas/alexa.jpg',
+      title: 'Alexa',
+      isProduct: true
     }
   ];
   const context = {
@@ -45,7 +56,7 @@ const CartMain = () => {
           </>
         ))}
 
-        <Continue total={398.98}/>
+        <Continue total={498.98}/>
       </main>
     </PostContext.Provider>
   )

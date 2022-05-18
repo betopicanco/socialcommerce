@@ -8,7 +8,8 @@ interface PostInterface {
   picture: string,
   title: string,
   liked: boolean,
-  isProduct: boolean
+  isProduct: boolean,
+  price: string | null
 }
 
 export default PostInterface;

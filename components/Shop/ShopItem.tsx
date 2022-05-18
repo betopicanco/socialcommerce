@@ -39,7 +39,7 @@ const ShopItem = (props: ShopItem) => {
             <Price price="199,00"/>
           </div>
 
-          <div className={`p-2 rounded-full active:bg-neutral-600`}>
+          <div className={`p-2 rounded-full active:bg-neutral-700`}>
             <ShoppingCartPlus style={` h-5 w-5 fill-yellow-300 `}/>
           </div>
         </div>
