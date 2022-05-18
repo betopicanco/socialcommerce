@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NextPage } from "next";
+import { GetStaticPathsContext, NextPage } from "next";
 import BottomMenu from "../components/BottomMenu";
 import Layout from "../components/Layout";
 import PostInterface from "../components/Post/interface";
@@ -36,6 +36,7 @@ const Shop: NextPage = (props: any) => {
                 )
               })}
             </div>
+            
           </main>
           <BottomMenu/>
         </>
