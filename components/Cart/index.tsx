@@ -1,6 +1,5 @@
 import CartItem from "./CartItem";
 import Continue from "./Continue";
-import PostContext from "../../Context/PostProvider";
 import PostInterface from "../Post/interface";
 
 interface CartMainProps {
@@ -9,28 +8,20 @@ interface CartMainProps {
 
 const CartMain = (props: CartMainProps) => {
   const { cartItems } = props;
+  // const { total, setTotal } = useState<number>(0);
   
   return (
     <main className="h-screen">
       {typeof cartItems === 'object' ? (
-        cartItems.forEach((item) => {
-          <p>{item.id}</p>
-        })
-        // cartItems.map((item) => (
-        //   <>
-        //     <div className="px-2">
-        //       <CartItem 
-        //         id={item.id}
-        //         profile={item.profile}
-        //         date={item.date}
-        //         picture={item.picture}
-        //         title={item.title}
-        //       />
-        //     </div>
+        cartItems.map((item) => (
+          <>
+            <div className="px-2">
+              <CartItem key={item.id} item={item} />
+            </div>
   
-        //     <hr className="border-neutral-700"/>
-        //   </>
-        // ))
+            <hr className="border-neutral-700"/>
+          </>
+        ))
       ) : ''}
 
       <Continue total={498.98}/>

@@ -63,17 +63,12 @@ const Cart: NextPage = (props: any) => {
       {href: '/cart', title: 'compras', icon: cart}
   ];
   const { items } = props;
-  console.log(items);
   
   return (
     <div className={`bg-neutral-800 h-screen`}>
       <Layout menuItems={menuItems}>
         <>
-          <main>
-            {/* {items.map((item: PostInterface) => {
-             <p>{item.id}</p>
-            })} */}
-          </main>
+          <CartMain cartItems={items}/>
           <BottomMenu/>
         </>
       </Layout>

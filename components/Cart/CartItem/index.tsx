@@ -3,53 +3,47 @@ import ProfileInfo from "../../Post/ProfileInfo";
 import Title from "../../Post/Title";
 import CartPicture from "./CartPicture";
 import Trash from "../../Icons/Trash";
+import PostInterface from "../../Post/interface";
+import PostContext from "../../../Context/PostProvider";
 
 interface CartItemProps {
-  id: number,
-  profile: {
-    pic: string,
-    name: string
-  },
-  date: string,
-  picture: string,
-  title: string,
+  key: number,
+  item: PostInterface
 }
 
 const CartItem = (props: CartItemProps) => {
   const {
     id,
-    picture,
     title
-  } = props;
+  } = props.item;
 
   return (
-    <div className={` py-4 `}>
-      <div className={` flex `}>
-        <CartPicture pic={picture}/>
+    <PostContext.Provider value={props.item}>
+      <div className={` py-4 `}>
+        <div className={` flex `}>
+          <CartPicture />
 
-        <div className={` 
-          flex justify-between 
-          w-2/3 pl-2 
-        `}>
-          <div>
-            <ProfileInfo picSize={30}/>
-          </div>
-          <div className={``}>
-            <div className={`mb-4 pl-12`}>
-              <Trash/>
+          <div className={` w-2/3 `}>
+            <div className={` h-full w-full `}>
+              <div className={` h-1/2 flex justify-end `}>
+                <Trash/>
+              </div>
+              <div className="h-1/2 flex justify-end">
+                <Price />
+              </div>
             </div>
-            <Price price={'299,99'}/>
           </div>
         </div>
-      </div>
 
-      <div className="pt-2">
-        
-        <Title id={id}>
-          {title}
-        </Title>
+        <div className="pt-2">
+          <ProfileInfo picSize={26}/>
+
+          <Title id={id}>
+            {title}
+          </Title>
+        </div>
       </div>
-    </div>
+    </PostContext.Provider>
   );
 }
 

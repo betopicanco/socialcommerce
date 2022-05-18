@@ -16,6 +16,7 @@ const Layout = (props: LayoutProps) => {
   const { menuItems, children } = props;
   const [ visibleMenu, setVisibleMenu ] = useState(false);
   const [ notifCounter, setNotifCounter ] = useState(0);
+  const [ cartItems , setCartItems ] = useState('');
 
   return (
     <LayoutContext.Provider 
@@ -24,7 +25,9 @@ const Layout = (props: LayoutProps) => {
         setVisibleMenu,
         notifCounter,
         setNotifCounter,
-        menuItems
+        menuItems,
+        cartItems,
+        setCartItems
       }}>
       <>
         <Header />

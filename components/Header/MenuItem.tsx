@@ -9,7 +9,6 @@ interface ItemMenuProps {
 
 const MenuItem = (props: ItemMenuProps) => {
   const {
-    key,
     href,
     title,
     icon
@@ -17,7 +16,7 @@ const MenuItem = (props: ItemMenuProps) => {
 
   return (
     <Link href={href} passHref>
-      <li key={key} 
+      <li 
         className={`
           bg-blue-700/70
           rounded-md
