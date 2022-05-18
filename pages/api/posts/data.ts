@@ -21,7 +21,7 @@ const data = [{
   date: '24/03/2022',
   picture: '/img/capas/fone-jbl.png',
   title: 'Fone de ouvido Over Ear JBL T710',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales. Vitae sapien pellentesque habitant morbi tristique senectus et. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Adipiscing at in tellus integer feugiat scelerisque. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Tristique senectus et netus et malesuada. A diam maecenas sed enim ut sem viverra aliquet eget. Quis hendrerit dolor magna eget est lorem. Massa sed elementum tempus egestas sed sed. Vulputate eu scelerisque felis imperdiet proin fermentum leo. Sed id semper risus in hendrerit gravida rutrum quisque non. Quam quisque id diam vel quam elementum. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut.',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales. Vitae sapien pellentesque habitant morbi tristique senectus et. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Adipiscing at in tellus integer feugiat scelerisque. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Tristique senectus et netus et malesuada. A diam maecenas sed enim ut sem viverra aliquet eget.',
   isProduct: true,
   price: '299,99'
 }, {

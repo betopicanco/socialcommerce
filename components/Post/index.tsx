@@ -8,6 +8,7 @@ import Picture from "./Picture";
 import ProfileInfo from "./ProfileInfo";
 import PostInterface from "./interface";
 import PostContext from "../../Context/PostProvider";
+import Content from "./Content";
 
 interface PostProps {
   key: number,
@@ -17,6 +18,7 @@ interface PostProps {
 const Post = (props: PostProps) => {
   const [showComment, setShowComment] = useState<boolean>(false);
   const [priceVisible, setPriceVisible] = useState<boolean>(false);
+  const [showInfo, setShowInfo] = useState<boolean>(false);
   const [inCart, setInCart] = useState<boolean>(false);
   const {
     id,
@@ -47,6 +49,8 @@ const Post = (props: PostProps) => {
           <PostMenu 
             showComment={showComment} 
             setShowComment={setShowComment}
+            showInfo={showInfo}
+            setShowInfo={setShowInfo}
             isProduct={isProduct}
             inCart={inCart}
           />
@@ -54,6 +58,10 @@ const Post = (props: PostProps) => {
           <Title id={id}>
             {title}
           </Title>
+
+          {showInfo && (
+            <Content/>
+          )}
         </div>
 
         {showComment ? ( <CommentArea/> ) : ''}

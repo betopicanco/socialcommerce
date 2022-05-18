@@ -4,18 +4,23 @@ import FinalizePurchase from "./ProdutctArea/FinalizePurchase";
 import ShowCommentArea from "./ShowCommentArea";
 import SharePost from "./SharePost";
 import Plus from "../../Icons/Plus";
-import { useState } from "react";
 
 interface PostMenuProps {
   showComment: boolean,
   setShowComment: (value:boolean) => void,
+  showInfo: boolean,
+  setShowInfo: (value: boolean) => void
   isProduct?: boolean | false,
   inCart: boolean,
 };
 
 const PostMenu = (props: PostMenuProps) => {
-  const [ showInfo, setShowInfo ] = useState(false);
-  const { isProduct, inCart } = props;
+  const { 
+    isProduct, 
+    inCart, 
+    showInfo, 
+    setShowInfo 
+  } = props;
 
   return (
       <div className={`w-full flex justify-between my-2`}>

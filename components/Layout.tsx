@@ -14,8 +14,8 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps) => {
   const { menuItems, children } = props;
-  const [visibleMenu, setVisibleMenu] = useState(false);
-  const [notifCounter, setNotifCounter] = useState(0);
+  const [ visibleMenu, setVisibleMenu ] = useState(false);
+  const [ notifCounter, setNotifCounter ] = useState(0);
 
   return (
     <LayoutContext.Provider 
