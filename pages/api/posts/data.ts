@@ -40,7 +40,7 @@ const data = [{
   liked: false,
   date: '17/05/2022',
   picture: '/img/capas/alexa.jpg',
-  title: 'Cuphead foi renovada para a segunda temporada e estreia ainda em 2022',
+  title: 'Alexa',
   isProduct: true
 }];
 

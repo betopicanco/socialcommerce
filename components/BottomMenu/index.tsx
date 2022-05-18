@@ -29,8 +29,8 @@ const BottomMenu = () => {
                 <HomeIcon style={style.icon}/>
             </BottomMenuItem>
 
-            <BottomMenuItem href='/test'>
-                <ShoppingBag style={style.icon}/>
+            <BottomMenuItem href='/shop'>
+              <ShoppingBag style={style.icon}/>
             </BottomMenuItem>
         </nav>
     )
