@@ -10,7 +10,7 @@ interface PostInterface {
   content: string,
   liked: boolean,
   isProduct: boolean,
-  price: string | null
+  price: number | null
 }
 
 export default PostInterface;
