@@ -2,9 +2,8 @@ import CartItem from "./CartItem";
 import Continue from "./Continue";
 import PostInterface from "../Post/interface";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import ModestWarning from "../ModestWarning";
-import SecondaryButton from "../SecondaryButton";
+import EmptyCart from "./EmptyCart";
 
 interface CartMainProps {
   cartItems?: PostInterface[]
@@ -36,20 +35,7 @@ const CartMain = (props: CartMainProps) => {
         })
       ) : (
         <ModestWarning>
-          <>
-            <p>Carrinho vazio...</p>
-            <p>Encontre produtos no </p>
-            
-            <SecondaryButton>
-              <Link href={`/`} passHref>Feed</Link>
-            </SecondaryButton>
-
-            <span> ou na </span>
-
-            <SecondaryButton>
-              <Link href={'/shop'} passHref>Loja</Link>
-            </SecondaryButton>
-          </>
+          <EmptyCart/>
         </ModestWarning>
       )}
 
