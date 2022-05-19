@@ -4,15 +4,9 @@ import LoginForm from "../components/Login/LoginForm";
 import LoginMain from '../components/Login';
 
 const Login: NextPage = () => {
-
-  const menuItems = [
-    { href: '/',  title: 'home' },
-    { href: '/signUp', title: 'sign up' }
-  ];
-
   return (
-    <div className={` h-screen `}>
-      <Layout menuItems={menuItems}>
+    <div className={` min-h-screen `}>
+      <Layout>
         <LoginMain>
           <LoginForm />
         </LoginMain>

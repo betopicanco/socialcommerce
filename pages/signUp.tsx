@@ -4,19 +4,15 @@ import LoginForm from "../components/Login/LoginForm";
 import SignUpMain from "../components/SignUp";
 
 const SignUp:NextPage = () => {
-    const menuItems = [
-        { href: '/', title: 'home' }
-    ];
-
-    return (
-        <div className={` h-screen `}>
-            <Layout menuItems={menuItems}>
-                <SignUpMain>
-                    <LoginForm/>
-                </SignUpMain>
-            </Layout>
-        </div>
-    )
+  return (
+    <div className={` min-h-screen `}>
+      <Layout>
+        <SignUpMain>
+            <LoginForm/>
+        </SignUpMain>
+      </Layout>
+    </div>
+  );
 }
 
 export default SignUp

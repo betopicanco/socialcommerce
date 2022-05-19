@@ -17,14 +17,14 @@ const Feed = (props: FeedProps) => {
   };
 
   return (
-    <div id="feed" className={styles.feed}>
+    <main className={styles.feed}>
       {props.feed.map((feed) => (
         <Post
           key={feed.id}
           data={feed}
         />
       ))}
-    </div>
+    </main>
   );
 }
 

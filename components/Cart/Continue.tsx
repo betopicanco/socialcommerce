@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThirdButton from "../ThirdButton";
 
 const Continue = (props: {total: number}) => {
   const { total } = props;
@@ -29,12 +30,7 @@ const Continue = (props: {total: number}) => {
         <Link
           href={'/test'}
           passHref>
-          <strong className={`
-          text-white p-2 rounded-md
-          bg-blue-700/70
-          `}>
-            Continuar
-          </strong>
+          <ThirdButton text="Continue"/>
         </Link>
       </div>
     </div>

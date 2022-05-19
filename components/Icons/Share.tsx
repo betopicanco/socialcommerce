@@ -3,7 +3,7 @@ const Share = () => {
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       className={`
-        stroke-1 stroke-yellow-300 mr-2
+        stroke-1 stroke-yellow-300 
         h-6 w-6
       `} 
       fill="none" 

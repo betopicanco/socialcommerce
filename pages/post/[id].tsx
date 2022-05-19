@@ -1,9 +1,8 @@
 import axios from "axios";
 import { GetStaticPropsContext, NextPage } from "next";
-import Mail from "../../components/Icons/Mail";
+import DefaultBG from "../../components/DefaultBG";
 import Layout from "../../components/Layout";
 import Post from "../../components/Post";
-import PostInterface from "../../components/Post/interface";
 
 export async function getStaticPaths() {
   return {
@@ -36,24 +35,21 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 const PostPage: NextPage = (props: any) => {
-  const mail = <Mail style='h-4 w-4 stroke-yellow-300'/>
-  const menuItems = [
-    {href: '/teste', title: 'chat', icon: mail},
-  ];
-
   const { post } = props;
 
   return (
-    <Layout menuItems={menuItems}>
-      <main className={` bg-neutral-800 text-white`}>
-        <section className={` h-screen sm:w-2/3 mx-auto `}>
-          <Post
-            key={post.id}
-            data={post}
-          />
-        </section>
-      </main>
-    </Layout>
+    <DefaultBG>
+      <Layout>
+        <main>
+          <section className={` sm:w-2/3 mx-auto `}>
+            <Post
+              key={post.id}
+              data={post}
+            />
+          </section>
+        </main>
+      </Layout>
+    </DefaultBG>
   );
 }
 

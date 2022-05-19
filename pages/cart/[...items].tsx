@@ -7,7 +7,7 @@ import ShoppingCart from "../../components/Icons/ShoppingCart";
 import Mail from "../../components/Icons/Mail";
 import LoginIcon from "../../components/Icons/Login";
 import axios from "axios";
-import PostInterface from "../../components/Post/interface";
+import DefaultBG from "../../components/DefaultBG";
 
 export async function getStaticPaths() {
   return {
@@ -53,26 +53,17 @@ export async function getStaticProps(
 }
 
 const Cart: NextPage = (props: any) => {
-  const cart = <ShoppingCart style={` fill-yellow-300 h-4 w-4 `}/>
-  const mail = <Mail style={` stroke-yellow-300 h-4 w-4 `}/>
-  const login = <LoginIcon style={` stroke-yellow-300 h-4 w-4 `}/>
-
-  const menuItems = [
-      {href: '/login', title: 'login', icon: login},
-      {href: '/teste', title: 'chat', icon: mail},
-      {href: '/cart', title: 'compras', icon: cart}
-  ];
   const { items } = props;
   
   return (
-    <div className={`bg-neutral-800 h-screen`}>
-      <Layout menuItems={menuItems}>
+    <DefaultBG>
+      <Layout>
         <>
           <CartMain cartItems={items}/>
           <BottomMenu/>
         </>
       </Layout>
-    </div>
+    </DefaultBG>
   );
 }
 

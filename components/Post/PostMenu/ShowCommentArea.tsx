@@ -6,7 +6,7 @@ interface ShowCommentAreaProps {
 
 const ShowCommentArea = (props: ShowCommentAreaProps) => {
   return (
-    <div onClick={ () => props.onClick() }>
+    <div className={` mr-2 active:bg-purple-300/30 rounded-full`} onClick={ () => props.onClick() }>
       <CommentCloud />
     </div>
   );

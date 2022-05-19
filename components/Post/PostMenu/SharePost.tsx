@@ -16,7 +16,7 @@ const SharePost = () => {
   }
 
   return (
-    <div onClick={() => share()}>
+    <div className={` active:bg-purple-300/30 rounded-full mr-2`} onClick={() => share()}>
       <Share />
     </div>
   )

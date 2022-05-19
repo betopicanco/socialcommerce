@@ -1,19 +1,16 @@
 import { NextPage } from "next";
+import DefaultBG from "../components/DefaultBG";
 import Layout from "../components/Layout";
 import PublishArea from "../components/PublishArea";
 
-const Publish:NextPage = () => {
-    const menuItems = [
-        { href: '/', title: 'home' }
-    ];
-
-    return (
-        <div className={`bg-neutral-800 h-screen`}>
-            <Layout menuItems={menuItems}>
-                <PublishArea/>
-            </Layout>
-        </div>
-    )
+const Publish: NextPage = () => {
+  return (
+    <DefaultBG>
+      <Layout>
+        <PublishArea/>
+      </Layout>
+    </DefaultBG>
+  );
 }
 
-export default Publish 
+export default Publish;

@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import LayoutContext from "../../../../Context/LayoutProvider/context";
 import PostContext from "../../../../Context/PostProvider";
+import SecondaryButton from "../../../SecondaryButton";
 import AddShoppingCart from "./AddShoppingCart";
 import FinalizePurchase from "./FinalizePurchase";
 import Price from "./Price";
-import ProductAreaButton from "./ProductAreaButton";
 
 const ProductArea = () => {
   const [inCart, setInCart] = useState<boolean>(false);
@@ -31,9 +31,9 @@ const ProductArea = () => {
           <AddShoppingCart />
         </div>
       ) : (
-        <ProductAreaButton>
+        <SecondaryButton>
           <FinalizePurchase />
-        </ProductAreaButton>
+        </SecondaryButton>
       )}
     </div>
   );

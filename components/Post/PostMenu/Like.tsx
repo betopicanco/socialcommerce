@@ -9,7 +9,7 @@ const Heart = () => {
     const [like, setLike] = useState(liked);
 
     return (
-      <div className={`h-6 w-6 mr-2`} onClick={() => setLike(!like)}>
+      <div className={`h-6 w-6 mr-2 active:bg-purple-300/30 rounded-full`} onClick={() => setLike(!like)}>
         {like ? (
           <HeartFill />
         ) : (
