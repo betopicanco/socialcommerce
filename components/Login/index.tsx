@@ -1,7 +1,7 @@
 import Form from "../Form";
 import LoginForm from "./LoginForm";
 
-const LoginMain = () => {
+const LoginMain = (props: {children: JSX.Element}) => {
   const styles = {
     main: `
       mt-20 sm:mt-20
