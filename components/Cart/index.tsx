@@ -12,9 +12,9 @@ interface CartMainProps {
 const CartMain = (props: CartMainProps) => {
   const { cartItems } = props;
   const [total, setTotal] = useState(0);
-  useEffect(() => {
-    setTotal(199)
-  })
+  // useEffect(() => {
+  //   setTotal(199)
+  // })
   
   return (
     <main className="h-screen">

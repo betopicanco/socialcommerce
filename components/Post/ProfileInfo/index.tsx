@@ -10,9 +10,6 @@ interface ProfileInfoProps {
 const ProfileInfo = (props: ProfileInfoProps) => {
   const { picSize } = props;
   const { profile } = useContext(PostContext);
-  useEffect(() => {
-    
-  }, []);
 
   return (
     <div className={`flex`}>

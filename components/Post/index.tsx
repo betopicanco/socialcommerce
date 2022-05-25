@@ -34,7 +34,7 @@ const Post = (props: PostProps) => {
         pt-4 border-b border-neutral-600
       `}>
         <div className={`flex justify-between px-4`}>
-          <ProfileInfo picSize={32}/>
+          {/* <ProfileInfo picSize={32}/> */}
 
           <Date>
             {date}
