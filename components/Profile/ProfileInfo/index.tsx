@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PostContext from "../../../Context/PostProvider";
 import ProfileName from "./ProfileName";
 import ProfilePic from "./ProfilePic";
@@ -11,6 +11,9 @@ interface ProfileInfoProps {
 const ProfileInfo = (props: ProfileInfoProps) => {
   const { picSize } = props;
   const { profile } = useContext(PostContext);
+  useEffect(() => {
+    
+  }, []);
 
   return (
     <Link href={`/profile/${profile}`} passHref>
