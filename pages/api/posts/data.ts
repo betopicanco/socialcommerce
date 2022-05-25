@@ -1,9 +1,6 @@
 const data = [{
   id: 1,
-  profile: {
-    pic: '/img/profile_pic/betopicanco.jpg',
-    name: 'betopicanco'
-  },
+  profile: 1,
   liked: false,
   date: '24/03/2022',
   picture: '/img/capas/batman.jpg',
@@ -13,10 +10,7 @@ const data = [{
   price: null
 },{
   id: 2,
-  profile: {
-      pic: '/img/profile_pic/jbl-logo-2.png',
-      name: 'jbloficial'
-  },
+  profile: 2,
   liked: false,
   date: '24/03/2022',
   picture: '/img/capas/fone-jbl.png',
@@ -26,10 +20,7 @@ const data = [{
   price: 299.99
 }, {
     id: 3,
-    profile: {
-        pic: '/img/profile_pic/logo_besouroz.jpg',
-        name: 'besouroZ'
-    },
+    profile: 3,
     liked: false,
     date: '24/03/2022',
     picture: '/img/capas/cuphead.jpg',
@@ -39,10 +30,7 @@ const data = [{
     price: null
 }, {
   id: 3,
-  profile: {
-    pic: '/img/profile_pic/betopicanco.jpg',
-    name: 'betopicanco'
-  },
+  profile: 1,
   liked: false,
   date: '17/05/2022',
   picture: '/img/capas/alexa.jpg',

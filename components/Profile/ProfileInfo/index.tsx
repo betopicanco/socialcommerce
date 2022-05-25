@@ -10,13 +10,13 @@ interface ProfileInfoProps {
 
 const ProfileInfo = (props: ProfileInfoProps) => {
   const { picSize } = props;
-  const { id, profile } = useContext(PostContext);
+  const { profile } = useContext(PostContext);
 
   return (
-    <Link href={`/profile/2`} passHref>
+    <Link href={`/profile/${profile}`} passHref>
       <div className={`flex`}>
-        <ProfilePic pic={profile.pic} size={picSize}/>
-        <ProfileName name={profile.name}/>
+        {/* <ProfilePic pic={profile.pic} size={picSize}/>
+        <ProfileName name={profile.name}/> */}link
       </div>
     </Link>
   );
