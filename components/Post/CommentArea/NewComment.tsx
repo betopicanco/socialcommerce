@@ -18,7 +18,8 @@ const NewComment = (props: NewCommentProps) => {
             rounded-l-md text-neutral-800
         `,
         btn: `
-            bg-neutral-600 
+            bg-indigo-700/50
+            border border-violet-500
             text-yellow-300 
             p-2 rounded-r-md
             active:bg-neutral-700

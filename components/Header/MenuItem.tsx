@@ -18,7 +18,7 @@ const MenuItem = (props: ItemMenuProps) => {
     <Link href={href} passHref>
       <li 
         className={`
-          bg-blue-700/70
+          bg-indigo-700/50
           rounded-md
           border border-violet-500
           text-white

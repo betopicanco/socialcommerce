@@ -4,7 +4,7 @@ import LoginForm from "./LoginForm";
 const LoginMain = (props: {children: JSX.Element}) => {
   const styles = {
     main: `
-      mt-20 sm:mt-20
+      mt-12 sm:mt-20
       md:w-2/3
       flex justify-center items-center h-4/5
     `
