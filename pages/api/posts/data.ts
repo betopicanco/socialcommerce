@@ -38,7 +38,7 @@ const data = [{
     isProduct: false,
     price: null
 }, {
-  id: 4,
+  id: 3,
   profile: {
     pic: '/img/profile_pic/betopicanco.jpg',
     name: 'betopicanco'

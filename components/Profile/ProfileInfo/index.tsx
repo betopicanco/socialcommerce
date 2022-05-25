@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { useContext } from "react";
 import PostContext from "../../../Context/PostProvider";
-import Statics from "../Statics";
 import ProfileName from "./ProfileName";
 import ProfilePic from "./ProfilePic";
 
@@ -10,13 +10,15 @@ interface ProfileInfoProps {
 
 const ProfileInfo = (props: ProfileInfoProps) => {
   const { picSize } = props;
-  const { profile } = useContext(PostContext);
+  const { id, profile } = useContext(PostContext);
 
   return (
-    <div className={`flex`}>
-      <ProfilePic pic={profile.pic} size={picSize}/>
-      <ProfileName name={profile.name}/>
-    </div>
+    <Link href={`/profile/2`} passHref>
+      <div className={`flex`}>
+        <ProfilePic pic={profile.pic} size={picSize}/>
+        <ProfileName name={profile.name}/>
+      </div>
+    </Link>
   );
 };
 
