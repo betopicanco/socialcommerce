@@ -1,9 +1,6 @@
 interface PostInterface {
   id: number
-  profile: {
-    pic: string,
-    name: string
-  },
+  profile: number,
   date: string,
   picture: string,
   title: string,

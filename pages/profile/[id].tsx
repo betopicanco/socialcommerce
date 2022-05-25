@@ -2,7 +2,6 @@ import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import DefaultBG from "../../components/DefaultBG";
 import Layout from "../../components/Layout";
-import Bio from "../../components/Profile/Bio";
 
 export async function getStaticPaths() {
   return {
@@ -19,24 +18,23 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const id = context.params?.id;
-  const path = `https://socialcommerce.vercel.app/api/profile/${id}`;
-  const profile = await axios.get(path)
+  // const profile = await axios.get()
 
   return {
     props: {
-      profile: profile.data
+      id: id
     }
   }
 }
 
 const Profile = (props: any) => {
-  const {profile} = props;
-
+  const {id} = props;
+  console.log(id);
   return (
     <DefaultBG>
       <Layout>
         <main>
-          <Bio profile={profile}/>
+
         </main>
       </Layout>
     </DefaultBG>
