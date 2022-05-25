@@ -11,7 +11,10 @@ interface CartMainProps {
 
 const CartMain = (props: CartMainProps) => {
   const { cartItems } = props;
-  // const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(0);
+  useEffect(() => {
+    setTotal(199)
+  })
   
   return (
     <main className="h-screen">
@@ -33,7 +36,7 @@ const CartMain = (props: CartMainProps) => {
         </ModestWarning>
       )}
 
-      <Continue total={100}/>
+      <Continue total={total}/>
     </main>
   )
 }
