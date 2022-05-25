@@ -1,5 +1,5 @@
 import Price from "../../Post/PostMenu/ProdutctArea/Price";
-import ProfileInfo from "../../Profile/ProfileInfo";
+import ProfileInfo from "../../Post/ProfileInfo";
 import Title from "../../Post/Title";
 import CartPicture from "./CartPicture";
 import Trash from "../../Icons/Trash";

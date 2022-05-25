@@ -16,12 +16,21 @@ const ProfileInfo = (props: ProfileInfoProps) => {
   }, []);
 
   return (
+<<<<<<< HEAD:components/Profile/ProfileInfo/index.tsx
     <Link href={`/profile/${profile}`} passHref>
       <div className={`flex`}>
         {/* <ProfilePic pic={profile.pic} size={picSize}/>
         <ProfileName name={profile.name}/> */}link
       </div>
     </Link>
+=======
+    <div className={`flex`}>
+      <ProfilePic pic={profile.pic} size={picSize}/>
+      <ProfileName>
+        {profile.name}
+      </ProfileName>
+    </div>
+>>>>>>> parent of 4a8165a (Upload api/profile 2 and 3):components/Post/ProfileInfo/index.tsx
   );
 };
 

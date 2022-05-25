@@ -1,5 +1,5 @@
-const ProfileName = (props: {name: string}) => {
-  const { name } = props;
+const ProfileName = (props: {children: string}) => {
+  const { children } = props;
   
   return (
     <span className={`
@@ -7,7 +7,7 @@ const ProfileName = (props: {name: string}) => {
       leading-7 text-sm
       align-middle
     `}>
-      { name }
+      { children }
     </span>
   );
 }

@@ -5,7 +5,7 @@ import PostMenu from "./PostMenu";
 import Date from "./Date";
 import Title from "./Title";
 import Picture from "./Picture";
-import ProfileInfo from "../Profile/ProfileInfo";
+import ProfileInfo from "./ProfileInfo";
 import PostInterface from "./interface";
 import PostContext from "../../Context/PostProvider";
 import Content from "./Content";
