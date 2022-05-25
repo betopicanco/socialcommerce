@@ -1,6 +1,6 @@
 import PostInterface from "../Post/interface";
 import PostContext from "../../Context/PostProvider";
-import ProfileInfo from "../Post/ProfileInfo";
+import ProfileInfo from "../Profile/ProfileInfo";
 import Picture from "../Post/Picture";
 import Title from "../Post/Title";
 import Price from "../Post/PostMenu/ProdutctArea/Price";
