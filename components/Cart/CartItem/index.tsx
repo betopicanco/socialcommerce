@@ -7,7 +7,6 @@ import PostInterface from "../../Post/interface";
 import PostContext from "../../../Context/PostProvider";
 
 interface CartItemProps {
-  key: number,
   item: PostInterface
 }
 

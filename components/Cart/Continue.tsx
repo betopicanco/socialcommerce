@@ -30,7 +30,9 @@ const Continue = (props: {total: number}) => {
         <Link
           href={'/test'}
           passHref>
-          <ThirdButton text="Continue"/>
+          <a>
+            <ThirdButton text="Continue"/>
+          </a>
         </Link>
       </div>
     </div>

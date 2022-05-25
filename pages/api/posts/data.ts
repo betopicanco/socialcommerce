@@ -27,7 +27,7 @@ const data = [{
 }, {
     id: 3,
     profile: {
-      "pic": "/img/profile_pic/logo_besouroz.png",
+      "pic": "/img/profile_pic/logo_besouroz.jpg",
       "name": "besouroz"
   },
     liked: false,
@@ -38,7 +38,7 @@ const data = [{
     isProduct: false,
     price: null
 }, {
-  id: 3,
+  id: 4,
   profile: {
     "pic": "/img/profile_pic/betopicanco.jpg",
     "name": "betopicanco"
