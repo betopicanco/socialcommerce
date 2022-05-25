@@ -22,14 +22,12 @@ const ShopItem = (props: ShopItem) => {
     picture,
     title
   } = product;
-
   const {
     notifCounter,
     setNotifCounter,
     cartItems,
     setCartItems,
   } = useContext(LayoutContext);
-  
   const [inCart, setInCart] = useState(false);
 
   const handleClick = () => {
