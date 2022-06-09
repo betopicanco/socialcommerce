@@ -14,7 +14,6 @@ const filterItems = (
   return items;
 }
 
-
 function handler(
   req: NextApiRequest, 
   res: NextApiResponse 

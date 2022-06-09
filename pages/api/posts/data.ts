@@ -1,8 +1,25 @@
-const data = [{
+type postData = {
+  id: number,
+  profile: {
+    id: number,
+    pic: string,
+    name: string
+  },
+  liked: boolean,
+  date: string,
+  picture: string,
+  title: string,
+  content: string,
+  isProduct: boolean,
+  price: null | number
+}[];
+
+const data: postData = [{
   id: 1,
   profile: {
-    "pic": "/img/profile_pic/betopicanco.jpg",
-    "name": "betopicanco"
+    id: 1,
+    pic: "/img/profile_pic/betopicanco.jpg",
+    name: "betopicanco"
   },
   liked: false,
   date: '24/03/2022',
@@ -14,8 +31,9 @@ const data = [{
 },{
   id: 2,
   profile: {
-    "pic": "/img/profile_pic/jbl-logo-2.png",
-    "name": "jbloficial"
+    id: 2,
+    pic: "/img/profile_pic/jbl-logo-2.png",
+    name: "jbl_oficial"
   },
   liked: false,
   date: '24/03/2022',
@@ -27,8 +45,9 @@ const data = [{
 }, {
     id: 3,
     profile: {
-      "pic": "/img/profile_pic/logo_besouroz.jpg",
-      "name": "besouroz"
+      id: 3,
+      pic: "/img/profile_pic/logo_besouroz.jpg",
+      name: "besouroz"
   },
     liked: false,
     date: '24/03/2022',
@@ -40,8 +59,9 @@ const data = [{
 }, {
   id: 4,
   profile: {
-    "pic": "/img/profile_pic/betopicanco.jpg",
-    "name": "betopicanco"
+    id: 1,
+    pic: "/img/profile_pic/betopicanco.jpg",
+    name: "betopicanco"
   },
   liked: false,
   date: '17/05/2022',

@@ -9,29 +9,29 @@ interface InputProps {
 const Input = (props: InputProps) => {
     const { id, type, label } = props;
     const style = {
-        div: `
-            my-4
-        `,
-        input: `
-            w-full rounded-md
-            caret-yellow-400
-            focus:outline-none
-            focus:ring focus:ring-purple-300
-            pl-3 p-1 mt-1
-        `
+      div: `
+        my-4
+      `,
+      input: `
+        w-full rounded-md
+        caret-yellow-400
+        focus:outline-none
+        focus:ring focus:ring-purple-300
+        pl-3 p-1 mt-1
+      `
     }
 
     return (
-        <div className={style.div}>
-            <Label id={id} content={label}/>
+      <div className={style.div}>
+        <Label id={id} content={label}/>
 
-            <br />
+        <br />
 
-            <input 
-                type={type} id={id}
-                className={style.input} 
-            />
-        </div>
+        <input 
+            type={type} id={id}
+            className={style.input} 
+        />
+      </div>
     )
 }
 

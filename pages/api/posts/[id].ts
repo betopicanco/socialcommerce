@@ -1,10 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import data from './data';
-import PostInterface from '../../../components/Post/interface';
 
-function handler(req: NextApiRequest, res: NextApiResponse) {
+function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+): void {
   const feed = data;
-  const id = +req.query.id;
+  const id = Number(req.query.id);
 
   try {
     const post = feed.find((p) => p.id === id)
