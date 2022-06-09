@@ -39,12 +39,13 @@ const ProfilePage = (props: ProfilePageProps) => {
   return (
     <DefaultBG>
       <Layout>
-        <ProfileProvider profile={props.profile}>
+        {/* <ProfileProvider profile={props.profile}>
           <>
             <ProfileMain/>
             <BottomMenu/>
           </>
-        </ProfileProvider>
+        </ProfileProvider> */}
+        <></>
       </Layout>
     </DefaultBG>
   );
