@@ -1,21 +1,20 @@
-type profileData = {
-  id: number,
-  pic: string,
-  name: string
-}[];
+import profile from './interface';
 
-const data: profileData = [{
+const data: profile[] = [{
   id: 1,
   pic: "/img/profile_pic/betopicanco.jpg",
-  name: "betopicanco"
+  name: "betopicanco",
+  bio: "Minha Bio"
 }, {
   id: 2,
   pic: "/img/profile_pic/jbl-logo-2.png",
-  name: "jbl_oficial"
+  name: "jbl_oficial",
+  bio: "O som lendário que acompanha seu ritmo!"
 }, {
   id: 3,
   pic: "/img/profile_pic/logo_besouroz.jpg",
-  name: "besouroz"
+  name: "besouroz",
+  bio: ''
 }];
 
 export default data;
