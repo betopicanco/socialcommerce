@@ -6,7 +6,7 @@ import Stats from "./Stats";
 
 const ProfileHeader = () => {
   const { profile } = useContext(ProfileContext);
-  const { pic, name } = profile;
+  const { pic, name, bio } = profile;
 
   return (
     <header>
@@ -15,7 +15,7 @@ const ProfileHeader = () => {
         {name}
       </strong>
       <p>
-        {/* {bio} */}
+        {bio}
       </p>
       
       <div>
