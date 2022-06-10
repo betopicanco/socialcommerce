@@ -5,14 +5,17 @@ interface ActionProps {
 
 const Action = (props: ActionProps) => {
   const { checked, value } = props;
-  const style = checked ? (
-    `border border-yellow-300`
+  let style = `w-full md:w-auto py-1 rounded-md `;
+
+  checked ? (
+    style += `border border-yellow-300 text-yellow-300`
   ) : (
-    `bg-blue-300`
+    style += `bg-indigo-600/40 border border-indigo-600`
   );
 
   return (
-    <button className={style}>
+    <button 
+      className={style}>
       {value}
     </button>
   );

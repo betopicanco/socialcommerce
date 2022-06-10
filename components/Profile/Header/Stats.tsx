@@ -7,8 +7,12 @@ const Stats = (props: StatsProps) => {
   const { value, description } = props;
   
   return (
-    <div>
-      {value}
+    <div className="text-xs inline-block pr-2 pt-2">
+      <div className="text-center">
+        <strong>
+          {value}
+        </strong>
+      </div>
       {description}
     </div>
   );

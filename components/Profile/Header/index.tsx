@@ -9,30 +9,35 @@ const ProfileHeader = () => {
   const { pic, name, bio } = profile;
 
   return (
-    <header>
-      <ProfilePic pic={pic} size={32}/>
-      <strong>
-        {name}
-      </strong>
-      <p>
-        {bio}
-      </p>
-      
-      <div>
-        <Stats value={50} description={'Publicações'}/>
-        <Stats value={714} description={'Seguidores'}/>
-        <Stats value={130} description={'Assinantes'}/>
+    <header className="p-4">
+      <div className="flex">
+        <div className="pr-4">
+          <ProfilePic pic={pic} size={52}/>
+        </div>
+        
+        <div>
+          <Stats value={50} description={'Publicações'}/>
+          <Stats value={714} description={'Seguidores'}/>
+          <Stats value={130} description={'Assinantes'}/>
+        </div>
       </div>
 
-      <nav>
-        <ul>
-          <li>
+      <div>
+        {name}
+      </div>
+      <p className="text-sm">
+        {bio}
+      </p>
+
+      <nav className="py-4">
+        <ul className="flex justify-between">
+          <li className="w-1/4">
             <Action value="Seguir" checked/>
           </li>
-          <li>
+          <li className="w-1/4">
             <Action value="Assinar"/>
           </li>
-          <li>
+          <li className="w-1/3">
             <Action value="Mensagem"/>
           </li>
         </ul>
