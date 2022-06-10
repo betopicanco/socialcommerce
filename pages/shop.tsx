@@ -4,6 +4,7 @@ import BottomMenu from "../components/BottomMenu";
 import DefaultBG from "../components/DefaultBG";
 import Layout from "../components/Layout";
 import PostInterface from "../components/Post/interface";
+import ShopList from "../components/Shop";
 import ShopItem from "../components/Shop/ShopItem";
 
 export async function getStaticProps() {
@@ -24,13 +25,7 @@ const Shop: NextPage = (props: any) => {
     <DefaultBG>
       <Layout>
         <>
-          <main>
-            <div className={` grid grid-cols-2 `}>
-              {products.map((p: PostInterface) =>  (
-                <ShopItem product={p} key={p.id}/>
-              ))}
-            </div>
-          </main>
+          <ShopList products={products}/>
 
           <BottomMenu/>
         </>

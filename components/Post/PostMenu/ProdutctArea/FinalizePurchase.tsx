@@ -4,9 +4,10 @@ import LayoutContext from "../../../../Context/LayoutProvider/context";
 
 const FinalizePurchase = () => {
   const { cartItems } = useContext(LayoutContext);
+  const path = `https://socialcommerce.vercel.app/cart${cartItems}`;
 
   return (
-    <Link href={`cart${cartItems}`} passHref>
+    <Link href={path} passHref>
       Finalizar Compra
     </Link>
   );

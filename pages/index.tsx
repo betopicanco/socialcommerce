@@ -23,10 +23,10 @@ const Home: NextPage = (props: any) => {
   return (
     <DefaultBG>
       <Layout>
-        <>
+        <div className='mt-12 sm:mt-20'>
           <Feed feed={feed}/>
           <BottomMenu/>
-        </>
+        </div>
       </Layout>
     </DefaultBG>
   );

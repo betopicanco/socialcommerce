@@ -1,14 +1,16 @@
 import { useState } from "react";
 import ProfileContext from "./context";
 import profile from "../../pages/api/profile/interface";
+import PostInterface from "../../components/Post/interface";
 
 interface ProfileProviderProps {
   children: JSX.Element,
-  profile: profile
+  profile: profile,
+  feed: PostInterface[]
 }
 
 const ProfileProvider = (props: ProfileProviderProps) => {
-  const { children, profile } = props;
+  const { children, profile, feed } = props;
 
   type profileSection = 'feed' | 'shop' | 'exclusive';
   const [ 
@@ -19,7 +21,7 @@ const ProfileProvider = (props: ProfileProviderProps) => {
   return (
     <ProfileContext.Provider 
       value={{
-        currentSection, setCurrentSection, profile
+        currentSection, setCurrentSection, profile, feed
       }}
     >
       {children}

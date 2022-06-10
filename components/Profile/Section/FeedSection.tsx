@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { useContext } from "react";
+import ProfileContext from "../../../Context/ProfileProvider/context";
+import Feed from "../../Feed";
 
 const FeedSection = () => {
-  useEffect(() => {
-    
-  });
+  const { feed } = useContext(ProfileContext);
 
   return (
     <section>
-      Feed
+      <Feed feed={feed}/>
     </section>
   );
 }
