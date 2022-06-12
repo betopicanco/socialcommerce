@@ -9,6 +9,7 @@ import { useContext, useState } from "react";
 import LayoutContext from "../../Context/LayoutProvider/context";
 import SecondaryButton from "../SecondaryButton";
 import Link from "next/link";
+import FinalizePurchase from "../Post/PostMenu/ProdutctArea/FinalizePurchase";
 
 interface ShopItem {
   key: number,
@@ -22,12 +23,14 @@ const ShopItem = (props: ShopItem) => {
     picture,
     title
   } = product;
+
   const {
     notifCounter,
     setNotifCounter,
     cartItems,
     setCartItems,
   } = useContext(LayoutContext);
+
   const [inCart, setInCart] = useState(false);
 
   const handleClick = () => {
@@ -66,9 +69,7 @@ const ShopItem = (props: ShopItem) => {
         ) : (
           <div className={`w-full flex justify-center mb-2`}>
             <SecondaryButton>
-              <Link href={`cart${cartItems}`} passHref>
-                Finalizar Compra
-              </Link>
+              <FinalizePurchase />
             </SecondaryButton>
           </div>
         )}

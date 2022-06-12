@@ -23,31 +23,41 @@ export async function getStaticProps(
   context: GetStaticPropsContext
 ) {
   const id = context.params?.id;
-  const profilePath = `https://socialcommerce.vercel.app/api/profile/${id}`;
-  const feedPath = `https://socialcommerce.vercel.app/api/profile/posts/${id}`;
+
+  const basePath = 'https://socialcommerce.vercel.app/api/profile/';
+  const profilePath = basePath + `${id}`;
+  const feedPath = basePath + `posts/${id}`;
+  const shopPath = basePath + `shop/${id}`;
+
   const profile = await axios.get(profilePath);
   const feed = await axios.get(feedPath);
+  const shop = await axios.get(shopPath);
 
   return { 
     props: { 
       profile: profile.data,
-      feed: feed.data
+      feed: feed.data,
+      shop: shop.data
     } 
   }
 }
 
 interface ProfilePageProps {
   profile: profile,
-  feed: PostInterface[]
+  feed: PostInterface[],
+  shop: PostInterface[],
 }
 
 const ProfilePage = (props: ProfilePageProps) => {
-  const { feed, profile } = props;
-  
+  const { feed, profile, shop } = props;
+  console.log(shop);
   return (
     <DefaultBG>
       <Layout>
-        <ProfileProvider profile={profile} feed={feed}>
+        <ProfileProvider 
+          profile={profile} 
+          feed={feed}
+          shop={shop}>
           <>
             <ProfileMain/>
             <BottomMenu/>

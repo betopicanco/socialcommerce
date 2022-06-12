@@ -6,11 +6,12 @@ import PostInterface from "../../components/Post/interface";
 interface ProfileProviderProps {
   children: JSX.Element,
   profile: profile,
-  feed: PostInterface[]
+  feed: PostInterface[],
+  shop: PostInterface[],
 }
 
 const ProfileProvider = (props: ProfileProviderProps) => {
-  const { children, profile, feed } = props;
+  const { children, profile, feed, shop } = props;
 
   type profileSection = 'feed' | 'shop' | 'exclusive';
   const [ 
@@ -21,7 +22,7 @@ const ProfileProvider = (props: ProfileProviderProps) => {
   return (
     <ProfileContext.Provider 
       value={{
-        currentSection, setCurrentSection, profile, feed
+        currentSection, setCurrentSection, profile, feed, shop
       }}
     >
       {children}

@@ -10,7 +10,7 @@ const ProfileHeader = () => {
 
   return (
     <header className="p-4">
-      <div className="flex">
+      <div className="flex justify-between">
         <div className="pr-4">
           <ProfilePic pic={pic} size={52}/>
         </div>
