@@ -3,9 +3,7 @@ import { NextPage } from "next";
 import BottomMenu from "../components/BottomMenu";
 import DefaultBG from "../components/DefaultBG";
 import Layout from "../components/Layout";
-import PostInterface from "../components/Post/interface";
 import ShopList from "../components/Shop";
-import ShopItem from "../components/Shop/ShopItem";
 
 export async function getStaticProps() {
   const path = 'https://socialcommerce.vercel.app/api/shop';

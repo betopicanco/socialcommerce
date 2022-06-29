@@ -10,7 +10,7 @@ const Feed = (props: FeedProps) => {
     feed: `
       pb-12 sm:pb-20
       mx-auto md:w-2/3
-      border-b border-neutral-600
+      sm:border-x sm:border-neutral-600
       text-white
     `
   };

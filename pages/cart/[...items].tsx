@@ -3,20 +3,13 @@ import { GetStaticPropsContext, NextPage } from "next";
 import Layout from "../../components/Layout";
 import CartMain from "../../components/Cart/index";
 import BottomMenu from "../../components/BottomMenu";
-import ShoppingCart from "../../components/Icons/ShoppingCart";
-import Mail from "../../components/Icons/Mail";
-import LoginIcon from "../../components/Icons/Login";
 import axios from "axios";
 import DefaultBG from "../../components/DefaultBG";
 
 export async function getStaticPaths() {
   return {
     paths: [
-      {
-        params: {
-          items: ['1']
-        }
-      }
+      { params: { items: ['1'] } }
     ],
     fallback: 'blocking'
   }
@@ -46,9 +39,7 @@ export async function getStaticProps(
   const cartItems = await axios.get(path);
 
   return {
-    props: {
-      items: cartItems.data
-    }
+    props: { items: cartItems.data }
   }
 }
 

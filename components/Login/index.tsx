@@ -1,10 +1,11 @@
 import Form from "../Form";
 import LoginForm from "./LoginForm";
 
-const LoginMain = (props: {children: JSX.Element}) => {
+const LoginMain = () => {
   const styles = {
     main: `
       mt-12 sm:mt-20
+      mx-auto
       md:w-2/3
       flex justify-center items-center h-4/5
     `

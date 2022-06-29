@@ -3,7 +3,7 @@ import SecondaryButton from "../SecondaryButton";
 
 const EmptyCart = () => {
   return (
-    <>
+    <div className="text-center">
       <p>Carrinho vazio...</p>
       <p>Encontre produtos no </p>
       
@@ -16,7 +16,7 @@ const EmptyCart = () => {
       <SecondaryButton>
         <Link href={'/shop'} passHref>Loja</Link>
       </SecondaryButton>
-    </>
+    </div>
   );
 }
 
